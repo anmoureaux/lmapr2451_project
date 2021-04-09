@@ -15,3 +15,4 @@
 \contentsline {subsection}{\numberline {6.1}Determination of the optimal $k$-points grid}{12}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Convergence study with respect to \texttt {ecut}}{13}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Convergence study with respect to \texttt {ngkpt}}{14}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Structural relaxation}{15}{subsection.6.4}%

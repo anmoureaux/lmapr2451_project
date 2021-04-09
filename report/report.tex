@@ -197,7 +197,8 @@ The study of the convergence of the simulation was performed by running \texttt{
 The total energy of the unit cell \texttt{etotali} for each \texttt{ecut} $i$ is then plotted versus \texttt{ecut} (which spans from $10$ [Ha] to $58.33$ [Ha]) (\autoref{fig:ecutConv}, upper plot). The total energy per atom can also be plotted (\autoref{fig:ecutConv}, lower plot). Upper and lower bounds of $\pm 0.5$ [mHa] are set around the last obtained value. It allows to determine the first \texttt{ecut} for which the convergence is reasonable. In the present case, \texttt{ecut} = \texttt{40} [Ha].
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{images/ecutConv}
-\caption{Total energy (upper) and total energy per atom (lower) with respect to the cut-off energy.}
+\caption{(a) total energy and (b) total energy per atom with respect to the cut-off energy.\\
+Linear interpolations are for visual guidance only.}
 \label{fig:ecutConv}
 \end{figure}
 
@@ -205,13 +206,16 @@ The total energy of the unit cell \texttt{etotali} for each \texttt{ecut} $i$ is
 Alternatively, the same kind of study is done for the number of $k$-points in the lattice. \texttt{Abinit} is run with the input file \texttt{1522\_1\_nkpConv.abi} (\autoref{Abi3}). The total energy and the energy per atom can be plotted versus the \texttt{ngkpt} parameter (\autoref{fig:nkpConv}).
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{images/nkpConv}
-\caption{Total energy (upper) and total energy per atom (lower) with respect to the number of $k$-points in the $k$-points grid.}
+\caption{(a) total energy and (b) total energy per atom with respect to the number of $k$-points in the $k$-points grid.
+Linear interpolations are for visual guidance only.}
 \label{fig:nkpConv}
 \end{figure}
 The converged \texttt{ngkpt} value is \texttt{[4 4 4]}.
 
 The couple of values (\texttt{ecut},\texttt{ngkpt}) that will be used in the further computations is thus (\texttt{40} [Ha],\texttt{[4 4 4]}).
 \subsection{Determination of the lattice parameters (relaxation)}
+Finally, the structural parameters of the unit cell will be optimized automatically by \texttt{Abinit}. This is done using the input file \texttt{1522\_1\_strucRel.abi} (\autoref{Abi4}).
+
 \textcolor{blue}{
 \textbackslash\textbackslash TODO\\
 - With the final (ecut,ngkpt), optimize acell}
@@ -358,6 +362,50 @@ Name of the input file : \texttt{1522\_1\_nkpConv.abi}
 \texttt{ngkpt+} &\texttt{2 2 2}&\\
 \texttt{nshiftk} &\texttt{1}&\\
 \texttt{shiftk} &\texttt{0.5 0.5 0.5}&
+\end{tabular}
+\end{center} 
+\newpage
+\subsection{Structural relaxation}
+\label{Abi4}
+Name of the input file : \texttt{1522\_1\_strucRel.abi}
+\begin{center}
+\begin{tabular}{lll}
+\texttt{acell} & \texttt{3.390} \texttt{4.438} \texttt{5.411} \texttt{Angstr} & \\
+\texttt{ntypat} & \texttt{2} &\\
+\texttt{znucl} & \texttt{26 16}& \\
+\texttt{natom} & \texttt{6} & \\
+\texttt{typat} & \texttt{1 1 2 2 2 2}&\\
+\texttt{xred} & \texttt{0\space\space\space\space\space\space 0\space\space\space\space\space\space 0} & \\
+& \texttt{0.5\space\space\space\space 0.5\space\space\space\space0.5} & \\
+& \texttt{0\space\space\space\space\space\space 0.206\space\space 0.3753} & \\
+& \texttt{0\space\space\space\space\space\space 0.794\space\space 0.6247} & \\
+& \texttt{0.5\space\space\space\space 0.294\space\space 0.8753} & \\
+& \texttt{0.5\space\space\space\space 0.706\space\space 0.1247} & \\
+\texttt{ecut} &\texttt{40}&\texttt{\# the converged value for ecut} \\
+&&\\
+\texttt{pseudos} & \multicolumn{2}{l}{\texttt{"pdj\_nc\_sr\_041\_lda\_standard\_psp8/Fe.psp8, pdj\_nc\_sr\_041\_lda\_standard\_psp8/S.psp8"}}\\
+&&\\
+\multicolumn{3}{l}{\texttt{\# parameters of the SCF procedure : }}\\
+\texttt{nstep} & \texttt{100} &\texttt{\# maximal number of SCF cycles}\\
+\texttt{toldff} & \texttt{1.0d-6} &\texttt{\# SCF procedure will stop when the difference of total}\\
+&&\texttt{\#\space\space\space\space energy between two iterations will be lower than}\\
+&&\texttt{\#\space\space\space\space toldfe Hartree}\\
+\texttt{diemac} &\texttt{24.0} & \texttt{\# preconditioning of the SCF procedure.}\\
+&&\\
+\multicolumn{3}{l}{\texttt{\# optimization of the lattice parameters}}\\
+\texttt{ionmov} & \texttt{2} & \texttt{\# allows to perform structural optimization}\\
+\texttt{optcell} & \texttt{1} & \texttt{\# unit cell volume optimization (rprim constant)}\\
+\texttt{dilatmx} & \texttt{1.05} & \texttt{\# as the starting lattice parameters are already}\\
+&&\texttt{\#\space\space\space\space  pretty accurate}\\
+\texttt{ecutsm} & \texttt{0.5} &\\
+\\
+\texttt{kptopt} & \texttt{1} & \\
+\texttt{nshiftk} & \texttt{1} & \\
+\texttt{shiftk} & \texttt{0.5 0.5 0.5} &\\
+\texttt{ndtset} & \texttt{2} & \\
+\texttt{ngkpt1} & \texttt{2 2 2} & \\
+\texttt{ngkpt2} & \texttt{4 4 4} & \\
+\texttt{getwfk} & \texttt{-1} & \texttt{\# to speed up the calculation}\\
 \end{tabular}
 \end{center} 
 \end{document}
