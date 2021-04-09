@@ -202,11 +202,15 @@ The total energy of the unit cell \texttt{etotali} for each \texttt{ecut} $i$ is
 \end{figure}
 
 \subsection{Convergence with respect to \texttt{ngkpt}}
-Alternatively, the same kind of study is done for the number of $k$-points in the lattice. \texttt{Abinit} is run with the input file \texttt{1522\_1\_nkpConv.abi}(\textcolor{red}{mettre le bon ecut}) (\autoref{Abi3}). The total energy and the energy per atom can be plotted versus the \texttt{ngkpt} parameter.
+Alternatively, the same kind of study is done for the number of $k$-points in the lattice. \texttt{Abinit} is run with the input file \texttt{1522\_1\_nkpConv.abi} (\autoref{Abi3}). The total energy and the energy per atom can be plotted versus the \texttt{ngkpt} parameter (\autoref{fig:nkpConv}).
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{images/nkpConv}
+\caption{Total energy (upper) and total energy per atom (lower) with respect to the number of $k$-points in the $k$-points grid.}
+\label{fig:nkpConv}
+\end{figure}
+The converged \texttt{ngkpt} value is \texttt{[4 4 4]}.
 
-\textcolor{blue}{
-\textbackslash\textbackslash TODO\\
-- Summarize the (ecut,ngkpt) that will be used for the further computations}
+The couple of values (\texttt{ecut},\texttt{ngkpt}) that will be used in the further computations is thus (\texttt{40} [Ha],\texttt{[4 4 4]}).
 \subsection{Determination of the lattice parameters (relaxation)}
 \textcolor{blue}{
 \textbackslash\textbackslash TODO\\
@@ -336,7 +340,7 @@ Name of the input file : \texttt{1522\_1\_nkpConv.abi}
 & \texttt{0\space\space\space\space\space\space 0.794\space\space 0.6247} & \\
 & \texttt{0.5\space\space\space\space 0.294\space\space 0.8753} & \\
 & \texttt{0.5\space\space\space\space 0.706\space\space 0.1247} & \\
-\texttt{ecut} &\texttt{VALEUR}&\texttt{\# the converged value for ecut} \\
+\texttt{ecut} &\texttt{40}&\texttt{\# the converged value for ecut} \\
 &&\\
 \texttt{pseudos} & \multicolumn{2}{l}{\texttt{"pdj\_nc\_sr\_041\_lda\_standard\_psp8/Fe.psp8, pdj\_nc\_sr\_041\_lda\_standard\_psp8/S.psp8"}}\\
 &&\\
