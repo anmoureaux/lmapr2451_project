@@ -210,7 +210,7 @@ Alternatively, the same kind of study is done for the number of $k$-points in th
 Linear interpolations are for visual guidance only.}
 \label{fig:nkpConv}
 \end{figure}
-The converged \texttt{ngkpt} value is \texttt{[4 4 4]}.
+One can see slight oscillations in the convergence region. This is presumably due to the break of symmetry occuring with some values of \texttt{ngkpt} (for example \texttt{[3 3 3]} and \texttt{[5 5 5]}, for which \texttt{etotal} is slightly over-estimated). The converged \texttt{ngkpt} value to be used for the further computations is thus \texttt{[4 4 4]}, in order to avoid the breaking of the symmetry. 
 
 The couple of values (\texttt{ecut},\texttt{ngkpt}) that will be used in the further computations is thus (\texttt{40} [Ha],\texttt{[4 4 4]}).
 \subsection{Determination of the lattice parameters (relaxation)}
@@ -357,9 +357,13 @@ Name of the input file : \texttt{1522\_1\_nkpConv.abi}
 &&\\
 \multicolumn{3}{l}{\texttt{\# parameters for generating the k-points grids : }}\\
 \texttt{kptopt} & \texttt{1} &\\
-\texttt{ndtset} & \texttt{4}&\\
-\texttt{ngkpt:} & \texttt{2 2 2}&\\
-\texttt{ngkpt+} &\texttt{2 2 2}&\\
+\texttt{ndtset} & \texttt{6}&\\
+\texttt{ngkpt1} & \texttt{2 2 2}&\\
+\texttt{ngkpt2} & \texttt{3 3 3}&\\
+\texttt{ngkpt3} & \texttt{4 4 4}&\\
+\texttt{ngkpt4} & \texttt{5 5 5}&\\
+\texttt{ngkpt5} & \texttt{6 6 6}&\\
+\texttt{ngkpt6} & \texttt{8 8 8}&\\
 \texttt{nshiftk} &\texttt{1}&\\
 \texttt{shiftk} &\texttt{0.5 0.5 0.5}&
 \end{tabular}
