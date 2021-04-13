@@ -192,21 +192,21 @@ To conclude, the default Monkhorst-Pack grids will be used, by using
 \texttt{shiftk} &\texttt{0.5 0.5 0.5}
 \end{tabular}
 \end{center}
-\subsection{Convergence with respect to \texttt{ecut}}
+\subsection{Convergence with respect to the cut-off energy (\texttt{ecut})}
 The study of the convergence of the simulation was performed by running \texttt{Abinit} with the input file \texttt{1522\_1\_ecutConv.abi} (\autoref{Abi2}).
 The total energy of the unit cell \texttt{etotali} for each \texttt{ecut} $i$ is then plotted versus \texttt{ecut} (which spans from $10$ [Ha] to $58.33$ [Ha]) (\autoref{fig:ecutConv}, upper plot). The total energy per atom can also be plotted (\autoref{fig:ecutConv}, lower plot). Upper and lower bounds of $\pm 0.5$ [mHa] are set around the last obtained value. It allows to determine the first \texttt{ecut} for which the convergence is reasonable. In the present case, \texttt{ecut} = \texttt{40} [Ha].
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{images/ecutConv}
-\caption{(a) total energy and (b) total energy per atom with respect to the cut-off energy.\\
+\caption{(a) Total energy and (b) total energy per atom with respect to the cut-off energy.\\
 Linear interpolations are for visual guidance only.}
 \label{fig:ecutConv}
 \end{figure}
 
-\subsection{Convergence with respect to \texttt{ngkpt}}
+\subsection{Convergence with respect to the number of $k$-points (\texttt{ngkpt})}
 Alternatively, the same kind of study is done for the number of $k$-points in the lattice. \texttt{Abinit} is run with the input file \texttt{1522\_1\_nkpConv.abi} (\autoref{Abi3}). The total energy and the energy per atom can be plotted versus the \texttt{ngkpt} parameter (\autoref{fig:nkpConv}).
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{images/nkpConv}
-\caption{(a) total energy and (b) total energy per atom with respect to the number of $k$-points in the $k$-points grid.
+\caption{(a) Total energy and (b) total energy per atom with respect to the number of $k$-points in the $k$-points grid.
 Linear interpolations are for visual guidance only.}
 \label{fig:nkpConv}
 \end{figure}
@@ -214,11 +214,27 @@ One can see slight oscillations in the convergence region. This is presumably du
 
 The couple of values (\texttt{ecut},\texttt{ngkpt}) that will be used in the further computations is thus (\texttt{40} [Ha],\texttt{[4 4 4]}).
 \subsection{Determination of the lattice parameters (relaxation)}
-Finally, the structural parameters of the unit cell will be optimized automatically by \texttt{Abinit}. This is done using the input file \texttt{1522\_1\_strucRel.abi} (\autoref{Abi4}).
-
-\textcolor{blue}{
-\textbackslash\textbackslash TODO\\
-- With the final (ecut,ngkpt), optimize acell}
+Finally, the structural parameters of the unit cell will be optimized automatically by \texttt{Abinit}. This is done using the input file \texttt{1522\_1\_strucRel.abi} (\autoref{Abi4}). We use the following parameters 
+\begin{center}
+\begin{tabular}{lll}
+\texttt{ecut} & \texttt{40.0} &\\
+\texttt{toldff} & \texttt{1.0d-6} &\\
+\texttt{ionmov} & \texttt{2} &\\
+\texttt{optcell} & \texttt{1} &\\
+\texttt{dilatmx} & \texttt{1.05}&\\
+\texttt{ecutsm} & \texttt{0.5}&\\
+\end{tabular}
+\end{center}
+and 4 datasets going from \texttt{ngkpt} = \texttt{[2 2 2]} to \texttt{ngkpt} = \texttt{[5 5 5]}. The convergence is obtained with \texttt{ngkpt} = \texttt{[3 3 3]}, as depicted on \autoref{fig:acellConv}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{images/acellConv}
+\caption{(a) Total energy and (b) total energy per atom with respect to the number of $k$-points in the $k$-points grid, with relaxation of the (volume of the) unit cell. Linear interpolation for visual guidance only.}
+\label{fig:acellConv}
+\end{figure}
+However, the converged value for \texttt{acell} will be the one corresponding to \texttt{ngkpt} = \texttt{[5 5 5]}, as it is the most accurate iteration. It is equal to \begin{center}\texttt{6.46340804703829E+00  8.46153537249437E+00  1.03166669446974E+01 Bohr},\end{center} which corresponds to \begin{center}\texttt{3.175063264799999452 4.233417686399999269  5.291772107999999974 Angstrom}.\end{center}
+Those values will be used in the further computations.
+\subsection{Convergence with respect to the broadening factor (\texttt{tsmear})}
 \subsection{Pseudopotentials}
 \textcolor{blue}{
 \textbackslash\textbackslash TODO\\
@@ -406,9 +422,11 @@ Name of the input file : \texttt{1522\_1\_strucRel.abi}
 \texttt{kptopt} & \texttt{1} & \\
 \texttt{nshiftk} & \texttt{1} & \\
 \texttt{shiftk} & \texttt{0.5 0.5 0.5} &\\
-\texttt{ndtset} & \texttt{2} & \\
+\texttt{ndtset} & \texttt{4} & \\
 \texttt{ngkpt1} & \texttt{2 2 2} & \\
-\texttt{ngkpt2} & \texttt{4 4 4} & \\
+\texttt{ngkpt2} & \texttt{3 3 3} & \\
+\texttt{ngkpt3} & \texttt{4 4 4} & \\
+\texttt{ngkpt4} & \texttt{5 5 5} & \\
 \texttt{getwfk} & \texttt{-1} & \texttt{\# to speed up the calculation}\\
 \end{tabular}
 \end{center} 

@@ -4,15 +4,16 @@
 \contentsline {section}{\numberline {2}Convergence studies and pseudopotentials}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Additional parameters}{5}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Determination of the optimal $k$-points grid}{6}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Convergence with respect to \texttt {ecut}}{6}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Convergence with respect to \texttt {ngkpt}}{6}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.3}Convergence with respect to the cut-off energy (\texttt {ecut})}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Convergence with respect to the number of $k$-points (\texttt {ngkpt})}{6}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Determination of the lattice parameters (relaxation)}{7}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Pseudopotentials}{7}{subsection.2.6}%
-\contentsline {section}{\numberline {3}Optical properties}{8}{section.3}%
-\contentsline {section}{\numberline {4}Comparison with the litterature}{9}{section.4}%
-\contentsline {section}{\numberline {5}Conclusion}{10}{section.5}%
-\contentsline {section}{\numberline {6}Appendices}{12}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Determination of the optimal $k$-points grid}{12}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Convergence study with respect to \texttt {ecut}}{13}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Convergence study with respect to \texttt {ngkpt}}{14}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Structural relaxation}{15}{subsection.6.4}%
+\contentsline {subsection}{\numberline {2.6}Convergence with respect to the broadening factor (\texttt {tsmear})}{8}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Pseudopotentials}{8}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Optical properties}{9}{section.3}%
+\contentsline {section}{\numberline {4}Comparison with the litterature}{10}{section.4}%
+\contentsline {section}{\numberline {5}Conclusion}{11}{section.5}%
+\contentsline {section}{\numberline {6}Appendices}{13}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Determination of the optimal $k$-points grid}{13}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Convergence study with respect to \texttt {ecut}}{14}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Convergence study with respect to \texttt {ngkpt}}{15}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Structural relaxation}{16}{subsection.6.4}%
