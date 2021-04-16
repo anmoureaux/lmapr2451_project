@@ -7,8 +7,8 @@
 \BOOKMARK [2][-]{subsection.2.3}{Convergence with respect to the cut-off energy \(ecut\)}{section.2}% 7
 \BOOKMARK [2][-]{subsection.2.4}{Convergence with respect to the number of k-points \(ngkpt\)}{section.2}% 8
 \BOOKMARK [2][-]{subsection.2.5}{Determination of the lattice parameters \(relaxation\)}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.6}{Convergence with respect to the broadening factor \(tsmear\)}{section.2}% 10
-\BOOKMARK [2][-]{subsection.2.7}{Pseudopotentials}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.6}{Convergence with respect to both the number of k-points and the broadening factor}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.7}{Summary}{section.2}% 11
 \BOOKMARK [1][-]{section.3}{Optical properties}{}% 12
 \BOOKMARK [1][-]{section.4}{Comparison with the litterature}{}% 13
 \BOOKMARK [1][-]{section.5}{Conclusion}{}% 14

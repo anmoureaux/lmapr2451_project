@@ -232,13 +232,22 @@ and 4 datasets going from \texttt{ngkpt} = \texttt{[2 2 2]} to \texttt{ngkpt} = 
 \caption{(a) Total energy and (b) total energy per atom with respect to the number of $k$-points in the $k$-points grid, with relaxation of the (volume of the) unit cell. Linear interpolation for visual guidance only.}
 \label{fig:acellConv}
 \end{figure}
-However, the converged value for \texttt{acell} will be the one corresponding to \texttt{ngkpt} = \texttt{[5 5 5]}, as it is the most accurate iteration. It is equal to \begin{center}\texttt{6.46340804703829E+00  8.46153537249437E+00  1.03166669446974E+01 Bohr},\end{center} which corresponds to \begin{center}\texttt{3.175063264799999452 4.233417686399999269  5.291772107999999974 Angstrom}.\end{center}
-Those values will be used in the further computations.
-\subsection{Convergence with respect to the broadening factor (\texttt{tsmear})}
-\subsection{Pseudopotentials}
-\textcolor{blue}{
-\textbackslash\textbackslash TODO\\
-- Describe (an)other(s) pseudopotential(s), explain the pros and cons => choose a better pseudopotential if needed}
+However, the converged value for \texttt{acell} will be the one corresponding to \texttt{ngkpt} = \texttt{[4 4 4]}, as it is the most accurate iteration that isn't likely to break the symmetry of the cell. It is equal to \begin{center}\texttt{6.45315083607590E+00  8.44810720073889E+00  1.03002947415949E+01},\end{center} which corresponds to \begin{center}\texttt{3.41486036030633278 4.470545805026401531 5.450681241775095387 Angstrom}.\end{center}
+\subsection{Convergence with respect to both the number of $k$-points and the broadening factor}
+\subsection{Summary}
+\begin{center}
+\begin{tabular}{l|c}
+\textbf{Parameter} & \textbf{Converged value} \\
+\hline
+\texttt{ecut} & \texttt{40.0} [Ha] \\
+\hline
+\texttt{ngkpt} & \texttt{[4 4 4]}\\
+\hline
+\texttt{acell} & \texttt{3.41586 4.47055 5.45068}\\
+\hline
+\texttt{acell} (with \texttt{tsmear}) & VALUE
+\end{tabular}
+\end{center}
 \newpage
 \section{Optical properties}
 \textcolor{blue}{
