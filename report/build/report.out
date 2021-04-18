@@ -10,10 +10,11 @@
 \BOOKMARK [2][-]{subsection.2.6}{Convergence with respect to both the number of k-points and the broadening factor}{section.2}% 10
 \BOOKMARK [2][-]{subsection.2.7}{Summary}{section.2}% 11
 \BOOKMARK [1][-]{section.3}{Optical properties}{}% 12
-\BOOKMARK [1][-]{section.4}{Comparison with the litterature}{}% 13
-\BOOKMARK [1][-]{section.5}{Conclusion}{}% 14
-\BOOKMARK [1][-]{section.6}{Appendices}{}% 15
-\BOOKMARK [2][-]{subsection.6.1}{Determination of the optimal k-points grid}{section.6}% 16
-\BOOKMARK [2][-]{subsection.6.2}{Convergence study with respect to ecut}{section.6}% 17
-\BOOKMARK [2][-]{subsection.6.3}{Convergence study with respect to ngkpt}{section.6}% 18
-\BOOKMARK [2][-]{subsection.6.4}{Structural relaxation}{section.6}% 19
+\BOOKMARK [2][-]{subsection.3.1}{Electronic band structure}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{Comparison with the litterature}{}% 14
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 15
+\BOOKMARK [1][-]{section.6}{Appendices}{}% 16
+\BOOKMARK [2][-]{subsection.6.1}{Determination of the optimal k-points grid}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.2}{Convergence study with respect to ecut}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.3}{Convergence study with respect to ngkpt}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.4}{Structural relaxation}{section.6}% 20
