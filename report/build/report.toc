@@ -6,10 +6,9 @@
 \contentsline {subsection}{\numberline {2.2}Determination of the optimal $k$-points grid}{6}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Convergence of the total energy per atom with respect to the cut-off energy (\texttt {ecut})}{6}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Convergence of the total energy per atom with respect to the number of $k$-points (\texttt {ngkpt})}{6}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Determination of the lattice parameters (preliminary structural relaxation)}{7}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Convergence of \texttt {acell} with respect to the cut-off energy}{8}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Convergence of \texttt {acell} with respect to the number of $k$-points}{8}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Summary}{8}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.5}Convergence of \texttt {acell} with respect to the cut-off energy}{7}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Convergence of \texttt {acell} with respect to the number of $k$-points}{8}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Summary}{8}{subsection.2.7}%
 \contentsline {section}{\numberline {3}Optical properties}{9}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Electronic band structure}{9}{subsection.3.1}%
 \contentsline {section}{\numberline {4}Comparison with the litterature}{10}{section.4}%
