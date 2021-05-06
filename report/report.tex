@@ -36,10 +36,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def \classSigle{LMAPR2451}
 \def \className{Atomistic and nanoscopic simulations}
-\def \workName{Study of pyrite / FeS$_\text{2}$ and its optical properties}
+\def \workName{Study of FeS$_\text{2}$ and its optical properties}
 \def \professors{Professors Jean-Christophe Charlier, Xavier Gonze \& Gian-Marco Rignanese\\Mentors : Alexandre Cloots \& Ionel-Bogdan Guster}
 \def \academicYear{2020-2021}
-\def \abstractText{This report aims to investigate the optical properties of pyrite (FeS$_\text{2}$). To do so, \textit{ab initio} computations are first performed on a 6-atoms unit cell. The convergence with respect to several structural parameters is also studied. The optical properties are then analyzed in the light of the obtained results. Finally, a comparison is made with the already existing documentation, and a discussion about the quality of the simulation is made.}
+\def \abstractText{This report aims to investigate the optical properties of FeS$_\text{2}$. To do so, \textit{ab initio} computations are first performed on a 6-atoms orthorhombic unit cell. The convergence with respect to several structural parameters is also studied. The optical properties are then analyzed in the light of the obtained results. Finally, a comparison is made with the published research, and a discussion about the quality of the simulation is made.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,7 +94,7 @@
 \tableofcontents
 \newpage
 \section{Introduction}
-\subsection{Motivations}
+\subsection{Motivation}
 Pyrite (FeS$_2$) (\autoref{fig:minerai}) is an interesting semiconducting material. Indeed, it can be used in numerous domains, from mechanical applications, where it is appreciated for its toughness and abrasiveness, to optical applications, where it can be used as an high-energy light absorber \cite{pyriteApps}. As pyrite is very abundant, it can become a material of choice in the industry if correct and valuable uses of the latter could be elaborated.
 
 One of the promising potential application of pyrite is its integration into solar panels. Indeed, pyrite thin films could be good alternatives to the conventional silicon based solar cells, which are more economically and ecologically costly. However, the performances of the material must be similar to materials already used for solar cells, in order to make it truly competitive \cite{pyriteSolarCells}.It is thus important to assess the different optical characteristics that pyrite is able to present. 
@@ -163,7 +163,7 @@ In the following subsections, the convergence studies with respect to \texttt{ec
 \subsection{Additional parameters}
 To begin, we will use the \textit{Local spin Density Approximation} (LDA) functional. Indeed, it is widely used and works well in many simulations. The pseudopotentials that will be used are retrieved from the pseudodojo \cite{PseudoDojo}. Two pseudopotentials are used : the NC SR (ONCVPSP v0.4.1) LDA standard pseudopotential relative to Fe, and the same one but relative to S (both in psp8 format).
 
-It is also important to properly define the parameters ruling the SCF procedure. The most important one is \texttt{nstep}, defining the number of SCF cycles. It is set to \texttt{50} in the first place, but can be easily increased if it is not sufficient. \texttt{toldfe} is set to \texttt{1.0d-10}, ensuring a pretty accurate convergence with respect to the total energy. \texttt{toldfe} is chosen as the structural relaxation is not performed yet (in that case, \texttt{toldff} is preferably used). Although it is not mandatory, the SCF procedure can be preconditioned by specifying the macroscopic dielectric constant (\texttt{diemac}). It is used to speed up the SCF procedure. A value of \texttt{24} is chosen, accordingly to \cite{MaterialsProject}. 
+It is also important to properly define the parameters ruling the SCF procedure. The most important one is \texttt{nstep}, defining the number of SCF cycles. It is set to \texttt{100} in the first place. \texttt{toldfe} is set to \texttt{1.0d-10}, ensuring a pretty accurate convergence with respect to the total energy. \texttt{toldfe} is chosen as the structural relaxation is not performed yet (in that case, \texttt{toldff} is preferably used). Although it is not mandatory, the SCF procedure can be preconditioned by specifying the macroscopic dielectric constant (\texttt{diemac}). It is used to speed up the SCF procedure. A value of \texttt{24} is chosen, accordingly to \cite{MaterialsProject}. 
 
 Finally, the parameters of the $k$-points grid must be specified. \texttt{kptopt} is set to \texttt{1} in order to take advantage of the symmetry of the unit cell. 
 By setting \texttt{prtkpt} to \texttt{1}, \texttt{Abinit} will generate a set of $k$-point grids, that will be helpful to optimize further computations and convergence studies.
@@ -172,7 +172,7 @@ By setting \texttt{prtkpt} to \texttt{1}, \texttt{Abinit} will generate a set of
 \texttt{pseudos} & \multicolumn{2}{l}{\texttt{"pdj\_nc\_sr\_041\_lda\_standard\_psp8/Fe.psp8, pdj\_nc\_sr\_041\_lda\_standard\_psp8/S.psp8"}}\\
 &&\\
 \multicolumn{3}{l}{\texttt{\# parameters of the SCF procedure : }}\\
-\texttt{nstep} & \texttt{50} &\texttt{\# maximal number of SCF cycles}\\
+\texttt{nstep} & \texttt{100} &\texttt{\# maximal number of SCF cycles}\\
 \texttt{toldfe} & \texttt{1.0d-10} &\texttt{\# SCF procedure will stop when the difference of total energy}\\
 &&\texttt{\#\space\space\space\space between two iterations will be lower than toldfe Hartree}\\
 \texttt{diemac} &\texttt{24.0} & \texttt{\# preconditioning of the SCF procedure.}\\
@@ -194,21 +194,21 @@ To conclude, the default Monkhorst-Pack grids will be used, by using
 \end{tabular}
 \end{center}
 \subsection{Convergence of the total energy per atom with respect to the cut-off energy (\texttt{ecut})}
-The study of the convergence of the simulation was performed by running \texttt{Abinit} with the input file \texttt{1522\_1\_ecutConv.abi} (\autoref{Abi2}).
-The total energy of the unit cell \texttt{etotali} for each \texttt{ecut} $i$ is then plotted versus \texttt{ecut} (which spans from $10$ [Ha] to $58.33$ [Ha]) (\autoref{fig:ecutConv}, upper plot). The total energy per atom can also be plotted (\autoref{fig:ecutConv}, lower plot). Upper and lower bounds of $\pm 0.5$ [mHa] are set around the last obtained value. It allows to determine the first \texttt{ecut} for which the convergence is reasonable. In the present case, \texttt{ecut} = \texttt{40} [Ha].
+The study of the convergence of the simulation was performed by running \texttt{Abinit} with the input file \texttt{1522\_2\_ecutConv.abi} (\autoref{Abi2}).
+The total energy of the unit cell \texttt{etotal}$i$ for each \texttt{ecut} $i$ is then plotted versus \texttt{ecut} (which spans from $10$ [Ha] to $58.33$ [Ha]) (\autoref{fig:ecutConv}, upper plot). The total energy per atom can also be plotted (\autoref{fig:ecutConv}, lower plot). Upper and lower bounds of $\pm 0.5$ [mHa] are set around the last obtained value. It allows to determine the first \texttt{ecut} for which the convergence is reasonable. In the present case, \texttt{ecut} = \texttt{40} [Ha].
 \begin{figure}[H]
-\includegraphics[width=\textwidth]{images/ecutConv}
-\caption{(a) Total energy and (b) total energy per atom with respect to the cut-off energy.\\
+\includegraphics[width=\textwidth]{images/etotecut}
+\caption{Total energy per atom with respect to the cut-off energy.\\
 Linear interpolations are for visual guidance only.}
 \label{fig:ecutConv}
 \end{figure}
 
 \subsection{Convergence of the total energy per atom with respect to the number of $k$-points (\texttt{ngkpt})}
 \label{convEtotNkpt}
-Alternatively, the same kind of study is done for the number of $k$-points in the lattice. \texttt{Abinit} is run with the input file \texttt{1522\_1\_nkpConv.abi} (\autoref{Abi3}). The total energy and the energy per atom can be plotted versus the \texttt{ngkpt} parameter (\autoref{fig:nkpConv}).
+Alternatively, the same kind of study is done for the number of $k$-points in the lattice. \texttt{Abinit} is run with the input file \texttt{1522\_2\_nkpConv.abi} (\autoref{Abi3}). The energy per atom can be plotted versus the \texttt{ngkpt} parameter (\autoref{fig:nkpConv}).
 \begin{figure}[H]
-\includegraphics[width=\textwidth]{images/nkpConv}
-\caption{(a) Total energy and (b) total energy per atom with respect to the number of $k$-points in the $k$-points grid.
+\includegraphics[width=\textwidth]{images/etotngkpt.png}
+\caption{Total energy per atom with respect to the number of $k$-points in the $k$-points grid.
 Linear interpolations are for visual guidance only.}
 \label{fig:nkpConv}
 \end{figure}
@@ -237,7 +237,7 @@ As for the previous convergence study, only \texttt{acell(1)} was plotted, as th
 \end{figure}
 \subsection{Summary}
 \begin{center}
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|c|c|}
 \cline{2-3}   
 \multicolumn{1}{c|}{}&\texttt{ecut [Ha]} & \texttt{ngkpt} \\
 \hline
@@ -256,7 +256,7 @@ Furthermore, the converged value for \texttt{acell}, i.e, obtained for \texttt{n
 or
 \begin{center}
 \begin{tabular}{cccr}
-3.41475326 & 4.470405595 & 5.450510291 & \text{Angstroms}.
+3.41475326 & 4 .470405595 & 5.450510291 & \text{Angstroms}.
 \end{tabular}
 \end{center}
 \newpage
@@ -294,8 +294,8 @@ or
 \bibitem{PseudoDojo} D. Hamann, "Optimized norm-conserving Vanderbilt pseudopotentials", 2021.
 \end{thebibliography}
 \newpage
-\section{Appendices}
-\subsection{Determination of the optimal $k$-points grid}
+\appendix
+\section{Determination of the optimal $k$-points grid}
 \label{Abi1}
 Name of the input file : \texttt{1522\_1\_kpointsgrids.abi}
 \begin{center}
@@ -328,7 +328,7 @@ Name of the input file : \texttt{1522\_1\_kpointsgrids.abi}
 \end{tabular}
 \end{center} 
 \newpage
-\subsection{Convergence study with respect to \texttt{ecut}}
+\section{Convergence study with respect to \texttt{ecut}}
 \label{Abi2}
 Name of the input file : \texttt{1522\_1\_ecutConv.abi}
 \begin{center}
@@ -366,9 +366,9 @@ Name of the input file : \texttt{1522\_1\_ecutConv.abi}
 \end{tabular}
 \end{center} 
 \newpage
-\subsection{Convergence study with respect to \texttt{ngkpt}}
+\section{Convergence study with respect to \texttt{ngkpt}}
 \label{Abi3}
-Name of the input file : \texttt{1522\_1\_nkpConv.abi}
+Name of the input file : \texttt{1522\_2\_nkpConv.abi}
 \begin{center}
 \begin{tabular}{lll}
 \texttt{acell} & \texttt{3.390} \texttt{4.438} \texttt{5.411} \texttt{Angstr} & \\
@@ -394,11 +394,12 @@ Name of the input file : \texttt{1522\_1\_nkpConv.abi}
 \texttt{diemac} &\texttt{24.0} & \texttt{\# preconditioning of the SCF procedure.}\\
 &&\\
 \multicolumn{3}{l}{\texttt{\# parameters for generating the k-points grids : }}\\
+\texttt{getwfk} & \texttt{-1}&\\
 \texttt{kptopt} & \texttt{1} &\\
 \texttt{ndtset} & \texttt{6}&\\
 \texttt{ngkpt1} & \texttt{2 2 2}&\\
 \texttt{ngkpt2} & \texttt{3 3 3}&\\
-\texttt{ngkpt3} & \texttt{4 4 4}&\\
+%\texttt{ngkpt3} & \texttt{4 4 4}&\\
 \texttt{ngkpt4} & \texttt{5 5 5}&\\
 \texttt{ngkpt5} & \texttt{6 6 6}&\\
 \texttt{ngkpt6} & \texttt{8 8 8}&\\
@@ -407,7 +408,7 @@ Name of the input file : \texttt{1522\_1\_nkpConv.abi}
 \end{tabular}
 \end{center} 
 \newpage
-\subsection{Structural relaxation}
+\section{Structural relaxation}
 \label{Abi4}
 Name of the input file : \texttt{1522\_1\_strucRel.abi}
 \begin{center}
