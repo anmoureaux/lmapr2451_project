@@ -191,7 +191,7 @@ By setting \texttt{prtkpt} to \texttt{1}, \texttt{Abinit} will generate a set of
 \texttt{prtkpt} & \texttt{1} 
 \end{tabular}
 \end{center}
-\subsection{Convergence of the total energy per atom with respect to the cut-off energy (\texttt{ecut})}
+\subsection{Convergence of the total energy per atom as a function of the cut-off energy (\texttt{ecut})}
 In the next computations, the default Monkhorst-Pack grids will be used. 4 $k$-points will be sampled along the longest lattice direction ([0 0 1]). To keep a constant density of $k$-points along each axis, 3 $k$-points will be sampled along directions [1 0 0] and  [0 1 0]. The input lattice parameters are thus :
 \begin{center}
 \begin{tabular}{lll}
@@ -200,7 +200,7 @@ In the next computations, the default Monkhorst-Pack grids will be used. 4 $k$-p
 \texttt{shiftk} &\texttt{0.5 0.5 0.5}
 \end{tabular}
 \end{center}
-The study of the convergence of the simulation was performed by running \texttt{Abinit} with the input file \texttt{1522\_3\_ecutConv.abi} (\autoref{Abi2}).
+The study of the convergence of the simulation was performed by running \texttt{Abinit} with the input file \texttt{1522\_3\_ecutConv.abi} (\autoref{Abi1}).
 The total energy per atom of the unit cell is then plotted versus \texttt{ecut} (which spans from $10$ [Ha] to $59$ [Ha]) (\autoref{fig:ecutConv}). Upper and lower bounds of $\pm 0.5$ [mHa] are set around the last obtained value. It allows to determine the first \texttt{ecut} for which the convergence is reasonable. In the present case, \texttt{ecut} = \texttt{40} [Ha].
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{images/etotecut}
@@ -210,9 +210,9 @@ Linear interpolations are shown as a guide for the eyes.}
 \label{fig:ecutConv}
 \end{figure}
 
-\subsection{Convergence of the total energy per atom with respect to the number of $k$-points (\texttt{ngkpt})}
+\subsection{Convergence of the total energy per atom as a function of the number of $k$-points (\texttt{ngkpt})}
 \label{convEtotNkpt}
-Alternatively, the same kind of study is performed with respect to the number of $k$-points in the Brillouin zone. \texttt{Abinit} is run with the input file \texttt{1522\_4\_nkpConv.abi} (\autoref{Abi3}). The energy per atom can be plotted versus the \texttt{ngkpt} parameter (\autoref{fig:nkpConv}).
+Alternatively, the same kind of study is performed with respect to the number of $k$-points in the Brillouin zone. \texttt{Abinit} is run with the input file \texttt{1522\_4\_nkpConv.abi} (\autoref{Abi2}). The energy per atom can be plotted versus the \texttt{ngkpt} parameter (\autoref{fig:nkpConv}).
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{images/etotngkpt.pdf}
 \caption{Total energy per atom as a function of the number of $k$-points in the $k$-points grid.\\
@@ -225,8 +225,8 @@ However, as the biggest and the smallest lattice scale parameters differs from 6
 The first converged \texttt{ngkpt} value is \texttt{[3 3 3]}.
 
 Concerning the convergence of the total energy per atom, the couple of values (\texttt{ecut},\texttt{ngkpt}) that will be used in the further computations is thus (\texttt{40} [Ha],\texttt{[3 3 3]}).
-\subsection{Convergence of \texttt{acell} with respect to the cut-off energy}
-The convergence of the length scales of the unit cell was performed using a dataset of \texttt{ecut} values between $20$ [Ha] and $50$ [Ha], \texttt{ngkpt} = \texttt{[3 3 3]} and \texttt{ecutsm} = $0.5$ [Ha]. The results are displayed on \autoref{fig:acellecutconv}.
+\subsection{Convergence of \texttt{acell} as a function of the cut-off energy}
+The convergence of the length scales of the unit cell was performed using a dataset of \texttt{ecut} values between $20$ [Ha] and $50$ [Ha], \texttt{ngkpt} = \texttt{[3 3 3]} and \texttt{ecutsm} = $0.5$ [Ha]. The input file used is \texttt{1522\_6\_acellEcutConv.abi} (\autoref{Abi3}). The results are displayed on \autoref{fig:acellecutconv}.
 The first converged value is $30$ [Ha].
 \begin{figure}
 \centering
@@ -234,8 +234,8 @@ The first converged value is $30$ [Ha].
 \caption{Convergence of the length scales \texttt{acell} as a function of the cut-off energy \texttt{ecut}.}
 \label{fig:acellecutconv}
 \end{figure}
-\subsection{Convergence of \texttt{acell} with respect to the number of $k$-points}
-The convergence of the length scales of the unit cell was analyzed with \texttt{ecut} = $40$ [Ha] and \texttt{ecutsm} = $0.5$ [Ha]. Additional values of \texttt{ngkpt} accounting for the conservation of a similar $k$-sampling density along the axis of the unit cell are also tested. The results are displayed on \autoref{fig:acellnkpConv}. It can be seen that \texttt{[2 2 2]} is already in the limits of $0.2\%$ of the length. Therefore, the value \texttt{[2 2 2]} is considered as the first converged value.
+\subsection{Convergence of \texttt{acell} as a function of the number of $k$-points}
+The convergence of the length scales of the unit cell was analyzed with \texttt{ecut} = $40$ [Ha] and \texttt{ecutsm} = $0.5$ [Ha]. Additional values of \texttt{ngkpt} accounting for the conservation of a similar $k$-sampling density along the axis of the unit cell are also tested. The input file used is \texttt{1522\_3\_acellNgkptConv.abi} (\autoref{Abi4}). The results are displayed on \autoref{fig:acellnkpConv}. It can be seen that \texttt{[2 2 2]} is already in the limits of $0.2\%$ of the length. Therefore, the value \texttt{[2 2 2]} is considered as the first converged value.
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{images/acellNgkpt.pdf}
@@ -341,8 +341,8 @@ Band gap & $0.735835$ eV\\
 \bibliography{biblio}
 \newpage
 \appendix
-\section{Convergence study with respect to \texttt{ecut}}
-\label{Abi2}
+\section{Convergence of the total energy per atom as a function of \texttt{ecut}}
+\label{Abi1}
 Name of the input file : \texttt{1522\_3\_ecutConv.abi}
 \begin{center}
 \begin{tabular}{lll}
@@ -379,8 +379,8 @@ Name of the input file : \texttt{1522\_3\_ecutConv.abi}
 \end{tabular}
 \end{center} 
 \newpage
-\section{Convergence study with respect to \texttt{ngkpt}}
-\label{Abi3}
+\section{Convergence of the total energy per atom as a function of \texttt{ngkpt}}
+\label{Abi2}
 Name of the input file : \texttt{1522\_4\_nkpConv.abi}
 \begin{center}
 \begin{tabular}{lll}
@@ -418,6 +418,93 @@ Name of the input file : \texttt{1522\_4\_nkpConv.abi}
 \texttt{ngkpt6} & \texttt{4 4 5}&\\
 \texttt{nshiftk} &\texttt{1}&\\
 \texttt{shiftk} &\texttt{0.5 0.5 0.5}&
+\end{tabular}
+\end{center} 
+\newpage
+\section{Convergence of the lattice scale parameters as a function of \texttt{ecut}}
+\label{Abi3}
+Name of the input file : \texttt{1522\_6\_acellEcutConv.abi}
+\begin{center}
+\begin{tabular}{lll}
+\texttt{acell} & \texttt{3.390} \texttt{4.438} \texttt{5.411} \texttt{Angstr} & \\
+\texttt{ntypat} & \texttt{2} &\\
+\texttt{znucl} & \texttt{26 16}& \\
+\texttt{natom} & \texttt{6} & \\
+\texttt{typat} & \texttt{1 1 2 2 2 2}&\\
+\texttt{xred} & \texttt{0\space\space\space\space\space\space 0\space\space\space\space\space\space 0} & \\
+& \texttt{0.5\space\space\space\space 0.5\space\space\space\space0.5} & \\
+& \texttt{0\space\space\space\space\space\space 0.206\space\space 0.3753} & \\
+& \texttt{0\space\space\space\space\space\space 0.794\space\space 0.6247} & \\
+& \texttt{0.5\space\space\space\space 0.294\space\space 0.8753} & \\
+& \texttt{0.5\space\space\space\space 0.706\space\space 0.1247} & \\
+&&\\
+\texttt{ndtset} &\texttt{16}&\\
+\texttt{ecut:} &\texttt{20}&\\
+\texttt{ecut+} &\texttt{2}&\\
+&&\\
+\texttt{pseudos} & \multicolumn{2}{l}{\texttt{"/Fe.psp8,S.psp8"}}\\
+&&\\
+\multicolumn{3}{l}{\texttt{\# parameters of the SCF procedure : }}\\
+\texttt{nstep} & \texttt{100} &\texttt{\# maximal number of SCF cycles}\\
+\texttt{toldff} & \texttt{1.0d-6} &\texttt{\# SCF procedure will stop when the difference of total}\\
+&&\texttt{\#\space\space\space\space energy between two iterations will be lower than}\\
+&&\texttt{\#\space\space\space\space toldfe Hartree}\\
+\texttt{diemac} &\texttt{24.0} & \texttt{\# preconditioning of the SCF procedure.}\\
+&&\\
+\texttt{ionmov} & \texttt{2} &\\
+\texttt{optcell} &\texttt{1}&\\
+\texttt{dilatmx} &\texttt{1.05}&\\
+\texttt{ecutsm} &\texttt{0.5}&\\
+\texttt{kptopt}&\texttt{1}&\\
+\texttt{ngkpt}&\texttt{3 3 3}&\\
+\texttt{nshiftk}&\texttt{1}&\\
+\texttt{shiftk}&\texttt{0.5 0.5 0.5}&\\
+\texttt{getwfk}&\texttt{-1}&\\
+\end{tabular}
+\end{center} 
+\newpage
+\section{Convergence of the lattice scale parameters as a function of \texttt{ngkpt}}
+\label{Abi4}
+Name of the input file : \texttt{1522\_3\_acellNgkptConv.abi}
+\begin{center}
+\begin{tabular}{lll}
+\texttt{acell} & \texttt{3.390} \texttt{4.438} \texttt{5.411} \texttt{Angstr} & \\
+\texttt{ntypat} & \texttt{2} &\\
+\texttt{znucl} & \texttt{26 16}& \\
+\texttt{natom} & \texttt{6} & \\
+\texttt{typat} & \texttt{1 1 2 2 2 2}&\\
+\texttt{xred} & \texttt{0\space\space\space\space\space\space 0\space\space\space\space\space\space 0} & \\
+& \texttt{0.5\space\space\space\space 0.5\space\space\space\space0.5} & \\
+& \texttt{0\space\space\space\space\space\space 0.206\space\space 0.3753} & \\
+& \texttt{0\space\space\space\space\space\space 0.794\space\space 0.6247} & \\
+& \texttt{0.5\space\space\space\space 0.294\space\space 0.8753} & \\
+& \texttt{0.5\space\space\space\space 0.706\space\space 0.1247} & \\
+&&\\
+\texttt{ndtset} &\texttt{6}&\\
+\texttt{ngkpt1} &\texttt{2 2 2}&\\
+\texttt{ngkpt2} &\texttt{2 2 3}&\\
+\texttt{ngkpt3} &\texttt{3 3 3}&\\
+\texttt{ngkpt4} &\texttt{3 3 4}&\\
+\texttt{ngkpt5} &\texttt{4 4 4}&\\
+\texttt{ngkpt6} &\texttt{4 4 5}&\\
+&&\\
+\texttt{ecut} &\texttt{40}&\\
+\texttt{pseudos} & \multicolumn{2}{l}{\texttt{"/Fe.psp8,S.psp8"}}\\
+&&\\
+\multicolumn{3}{l}{\texttt{\# parameters of the SCF procedure : }}\\
+\texttt{nstep} & \texttt{100} &\texttt{\# maximal number of SCF cycles}\\
+\texttt{toldff} & \texttt{1.0d-6} &\texttt{\# SCF procedure will stop when the difference of total}\\
+&&\texttt{\#\space\space\space\space energy between two iterations will be lower than}\\
+&&\texttt{\#\space\space\space\space toldfe Hartree}\\
+\texttt{diemac} &\texttt{24.0} & \texttt{\# preconditioning of the SCF procedure.}\\
+&&\\
+\texttt{ionmov} & \texttt{2} &\\
+\texttt{optcell} &\texttt{1}&\\
+\texttt{dilatmx} &\texttt{1.05}&\\
+\texttt{ecutsm} &\texttt{0.5}&\\
+\texttt{nshiftk}&\texttt{1}&\\
+\texttt{shiftk}&\texttt{0.5 0.5 0.5}&\\
+\texttt{getwfk}&\texttt{-1}&\\
 \end{tabular}
 \end{center} 
 \end{document}

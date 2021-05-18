@@ -3,14 +3,16 @@
 \contentsline {subsection}{\numberline {1.2}\ch {FeS2} : Overview and \texttt {Abinit} representation}{4}{subsection.1.2}%
 \contentsline {section}{\numberline {2}Convergence studies and pseudopotentials}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Additional parameters}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Convergence of the total energy per atom with respect to the cut-off energy (\texttt {ecut})}{5}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Convergence of the total energy per atom with respect to the number of $k$-points (\texttt {ngkpt})}{6}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Convergence of \texttt {acell} with respect to the cut-off energy}{6}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Convergence of \texttt {acell} with respect to the number of $k$-points}{7}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.2}Convergence of the total energy per atom as a function of the cut-off energy (\texttt {ecut})}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Convergence of the total energy per atom as a function of the number of $k$-points (\texttt {ngkpt})}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Convergence of \texttt {acell} as a function of the cut-off energy}{6}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Convergence of \texttt {acell} as a function of the number of $k$-points}{7}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Summary}{7}{subsection.2.6}%
 \contentsline {section}{\numberline {3}Optical properties}{9}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Electronic band structure}{9}{subsection.3.1}%
 \contentsline {section}{\numberline {4}Comparison with the litterature}{10}{section.4}%
 \contentsline {section}{\numberline {5}Conclusion}{11}{section.5}%
-\contentsline {section}{\numberline {A}Convergence study with respect to \texttt {ecut}}{12}{appendix.A}%
-\contentsline {section}{\numberline {B}Convergence study with respect to \texttt {ngkpt}}{13}{appendix.B}%
+\contentsline {section}{\numberline {A}Convergence of the total energy per atom as a function of \texttt {ecut}}{12}{appendix.A}%
+\contentsline {section}{\numberline {B}Convergence of the total energy per atom as a function of \texttt {ngkpt}}{13}{appendix.B}%
+\contentsline {section}{\numberline {C}Convergence of the lattice scale parameters as a function of \texttt {ecut}}{14}{appendix.C}%
+\contentsline {section}{\numberline {D}Convergence of the lattice scale parameters as a function of \texttt {ngkpt}}{15}{appendix.D}%
