@@ -160,8 +160,8 @@ Finally, the primitive cell will be represented as follow in \texttt{Abinit} inp
 The data also comes from the Materials Project \cite{MaterialsProject}.
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.61\textwidth]{images/primitiveCell}
-\caption{Primitive cell of orthorhombic \ch{FeS2}.\\Materials Project (mp-1522), Jmol}
+\includegraphics[width=\textwidth]{images/primitiveCell.eps}
+\caption{Primitive cell of orthorhombic \ch{FeS2}.\\Materials Project (mp-1522), Vesta}
 \label{fig:primitiveCell}
 \end{figure}
 \newpage
@@ -301,26 +301,56 @@ and
 \end{center}
 \section{Optical properties}
 \subsection{Electronic band structure}
-The band structure of the material was computed as follows. First, an optimal $k$-path was obtained using \texttt{Abipy}. Then, 50 bands were analyzed using the parameters from the previous convergence studies (\texttt{ecut} = 30 Ha and \texttt{ngkpt} = [2 2 2]). A self-consistent density computation was done beforehand. The band structure is represented on \autoref{fig:bs}. From the data, the following values were obtained : 
+The band structure of the material was computed as follows. First, an optimal $k$-path is generated in the Brillouin zone of a simple orthorhombic lattice \autoref{fig:orcBZ} using the \texttt{Abistruct} module of \texttt{Abipy} (\autoref{Abi5}). 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\textwidth]{images/bz.png}
+\caption{Brillouin zone for a simple orthorhombic lattice \cite{bzw}}
+\label{fig:orcBZ}
+\end{figure}
+
+To obtain the band structure of the material, a SCF computation of the electronic density is run in the first place. Then, the band structure is computed using a non-SCF computation based on the previously generated electronic density file. The structural parameters of the unit cell are the ones provided by \texttt{Absitruct}. \texttt{ecut} and \texttt{ngkpt} are chosen accordingly to the previous convergence studies.
+
+For the SCF computation, \texttt{prtden} is set to \texttt{1}, in order to generate the DEN files.
+
+For the band structure computation, \texttt{iscf} is set to \texttt{-2} and \texttt{getden} is set to \texttt{-1} to read the electronic densities from the previously generated DEN file.
+As the pseudopotentials used only consider 56 electrons in the whole unit cell, 27 electronic bands are completely filled. The 28th band is thus the valence band. To obtain a clear representation of the band gap of the material, 35 electronic bands are defined. \texttt{kptopt} is set to \texttt{-15} accrodingly to the $k$-path provided by Abistruct. \texttt{ndivsm} is set to \texttt{30}, and \texttt{nbdbuf} is set to \texttt{-2} to place the last 2\% bands of highest energy in a buffer, preventing \texttt{Abinit} to spent too much time trying to converge them.
+
+The input file \texttt{1522\_14\_bs.abi} is available in \autoref{Abi6}. 
+
+
+
+The band structure is represented on \autoref{fig:bs}. The Fermi energy and the energy of the bandgap were also retrieved from the computed data. It is compared below with the data from the Materials Project \cite{MaterialsProject}. The band structure provided by the Materials Project is also displayed for comparison on \autoref{fig:bsMP}.
+
+Besides a difference of $2.45$ eV concerning the Fermi energies, the results of the computation seems consistent regarding the data of the Materials Project. \textbf{\textcolor{red}{why ???}}
 \begin{center}
-\begin{tabular}{|l|c|}
+\begin{tabular}{|l|c|c|}
+\cline{2-3}
+\multicolumn{1}{l|}{}&\textbf{Computed}&\textbf{Materials Project}\\
+\hline 
+\textbf{Fermi energy [eV]}& $10.13183$&$7.6763$\\
 \hline
-Fermi energy & $9.03565$ eV\\
-\hline
-Band gap & $0.735835$ eV\\
+\textbf{Band gap energy [eV]} & $0.8674$ & $0.8807$ \\
 \hline
 \end{tabular}
 \end{center}
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{images/bs.pdf}
+\includegraphics[width=0.9\textwidth]{images/bs.pdf}
 \caption{Band structure of \ch{FeS2}. The red dots represent the valence band minimums and the conduction band maximum.}
 \label{fig:bs}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth,height=3.2in]{images/chart.pdf}
+\caption{Band structure of \ch{FeS2} provided by the Materials Project.}
+\label{fig:bsMP}
 \end{figure}
 
 \textcolor{blue}{
 \textbackslash\textbackslash TODO\\
-- Compute the electronic band structure\\
+- compute the electronic DOS 
 - compute the phonon dispersion\\
 - Implications for a thin film used in a solar cell}
 \newpage
@@ -507,4 +537,131 @@ Name of the input file : \texttt{1522\_3\_acellNgkptConv.abi}
 \texttt{getwfk}&\texttt{-1}&\\
 \end{tabular}
 \end{center} 
+\newpage
+\section{Band structure : $k$-path generation using Absitruct (Abipy)}
+\label{Abi5}
+Command used : \texttt{abistruct.py kpath input.abi}\\[0.5cm]
+Input file : \texttt{input.abi} :\\
+\begin{tabular}{lll}
+\texttt{acell} &\texttt{3.315 4.3398 5.2913 Angstr}&\texttt{\# the converged values}\\
+\texttt{ntypat}&\texttt{2}\\
+\texttt{znucl}&\texttt{26 16}\\
+\texttt{natom}&\texttt{6}\\
+\texttt{typat}&\texttt{1 1 2 2 2 2}\\
+\texttt{xred} &&\texttt{\# the converged values}\\
+&\texttt{0\space\space\space0\space\space\space\space\space\space\space0}&\\
+&\texttt{0.5 0.5 \space\space\space\space0.5}&\\
+&\texttt{0\space\space\space0.20809 0.37374}&\\
+&\texttt{0\space\space\space0.79191 0.62626}&\\
+&\texttt{0.5 0.29191 0.87374}&\\
+&\texttt{0.5 0.70809 0.12626}&\\
+\texttt{pseudos} & \multicolumn{2}{l}{\texttt{"/Fe.psp8,S.psp8"}}\\
+\texttt{nstep} &\texttt{100}&\\
+\texttt{toldfe} &\texttt{1.0d-10}&\\
+\texttt{diemac} &\texttt{24.0}&\\
+\texttt{kptopt} &\texttt{1}&\\
+\texttt{ngkpt} &\texttt{3 3 3}&\\
+\texttt{nshiftk} &\texttt{1}&\\
+\texttt{shiftk} &\texttt{0.5 0.5 0.5}&\\
+\texttt{getwfk} &\texttt{-1}&\\
+\end{tabular}
+\newpage
+Output :\\
+\begin{tabular}{lll}
+\multicolumn{3}{l}{\texttt{\# Abinit structure}}\\
+\texttt{natom}&\texttt{6}\\
+\texttt{ntypat}&\texttt{2}\\
+\texttt{typat}&\texttt{1 1 2 2 2 2}\\
+\texttt{znucl}&\texttt{26 16}\\
+\texttt{xred} &&\texttt{\# the converged values}\\
+&\texttt{0\space\space\space0\space\space\space\space\space\space\space0}&\\
+&\texttt{0.5 0.5 \space\space\space\space0.5}&\\
+&\texttt{0\space\space\space0.20809 0.37374}&\\
+&\texttt{0\space\space\space0.79191 0.62626}&\\
+&\texttt{0.5 0.29191 0.87374}&\\
+&\texttt{0.5 0.70809 0.12626}&\\
+\texttt{acell}&\texttt{1.0 1.0 1.0}&\\
+\texttt{rprim}&&\\
+&\texttt{6.2644421031 0.0000000000 0.0000000000}&\\
+&\texttt{0.0000000000 8.2010334357 0.0000000000}&\\
+&\texttt{0.0000000000 0.0000000000 9.9991078432}&\\
+\multicolumn{3}{l}{\texttt{\# tolwfr 1e-20 iscf -2 \# NSCF run}}\\
+\multicolumn{3}{l}{\texttt{\# To read previous DEN file, use: getden -1 or specify filename via getden\_path "out\_DEN"
+}}\\
+\multicolumn{3}{l}{\texttt{\textsc{\# K-path in reduced coordinates:
+}}}\\
+\texttt{ndivsm} & \texttt{10}&\\
+\texttt{kptopt} &\texttt{-15}&\\
+\texttt{kptbounds}&&\\
+&\texttt{+0.00000 +0.00000 +0.00000}&\texttt{\# \$\textbackslash Gamma\$}\\
+&\texttt{+0.50000  +0.00000  +0.00000}&\texttt{\# X}\\
+&\texttt{+0.50000  +0.50000  +0.00000}&\texttt{\# S}\\
+&\texttt{+0.00000  +0.50000  +0.00000}&\texttt{\# Y}\\
+&\texttt{+0.00000  +0.00000  +0.00000}&\texttt{\# \$\textbackslash Gamma\$}\\
+&\texttt{+0.00000  +0.00000  +0.50000}&\texttt{\# Z}\\
+&\texttt{+0.50000  +0.00000  +0.50000}&\texttt{\# U}\\
+&\texttt{+0.50000  +0.50000  +0.50000}&\texttt{\# R}\\
+&\texttt{+0.00000  +0.50000  +0.50000}&\texttt{\# T}\\
+&\texttt{+0.00000  +0.00000  +0.50000}&\texttt{\# Z}\\
+&\texttt{+0.00000  +0.50000  +0.00000}&\texttt{\# Y}\\
+&\texttt{+0.00000  +0.50000  +0.50000}&\texttt{\# T}\\
+&\texttt{+0.50000  +0.00000  +0.50000}&\texttt{\# U}\\
+&\texttt{+0.50000  +0.00000  +0.00000}&\texttt{\# X}\\
+&\texttt{+0.50000  +0.50000  +0.00000}&\texttt{\# S}\\
+&\texttt{+0.50000  +0.50000  +0.50000}&\texttt{\# R}\\
+\end{tabular}
+\newpage
+\section{Band structure computation}
+\label{Abi6}
+\begin{center}
+\begin{tabular}{lll}
+\texttt{ndtset}&\texttt{2}&\\
+\texttt{natom} &\texttt{6}&\\
+\texttt{typas} &\texttt{1 1 2 2 2 2}&\\
+\texttt{xred} &&\\
+&\texttt{0.0000000000    0.0000000000    0.0000000000}&\\
+&\texttt{0.5000000000    0.5000000000    0.5000000000}&\\
+&\texttt{0.0000000000    0.2080900000    0.3737400000}&\\
+&\texttt{0.0000000000    0.7919100000    0.6262600000}&\\
+&\texttt{0.5000000000    0.2919100000    0.8737400000}&\\
+&\texttt{0.5000000000    0.7080900000    0.1262600000}&\\
+\texttt{ecut} &\texttt{40.0}&\texttt{\# converged value}\\
+\multicolumn{3}{l}{\texttt{\# definition of the SCF procedure}}\\
+\texttt{nstep}&\texttt{100}&\\
+\texttt{diemac}&\texttt{24.0}&\\
+\multicolumn{3}{l}{\texttt{\# first dataset : SCF density computation}}\\
+\texttt{kptopt1}&\texttt{1}&\\
+\texttt{nshiftk1}&\texttt{1}&\\
+\texttt{shiftk1}&\texttt{0.5 0.5 0.5}&\\
+\texttt{ngkpt1}&\texttt{3 3 3}&\texttt{\# converged value}\\
+\texttt{prtden1}&\texttt{1}&\\
+\texttt{toldfe1}&\texttt{1.0d-10}&\\
+\multicolumn{3}{l}{\texttt{\# second dataset : band structure computation}}\\
+\texttt{iscf2}&\texttt{-2}&\\
+\texttt{getden2}&\texttt{-1}&\\
+\texttt{kptopt2}&\texttt{-15}&\texttt{\# number of k-segments}\\
+\texttt{nband2}&\texttt{35}&\texttt{\# numbe rof bands}\\
+\texttt{nbdbuf}&\texttt{-2}&\\
+\texttt{ndivsm2}&\texttt{30}&\\
+\texttt{kptbounds}&&\\
+&\texttt{+0.00000 +0.00000 +0.00000}&\texttt{\# \$\textbackslash Gamma\$}\\
+&\texttt{+0.50000  +0.00000  +0.00000}&\texttt{\# X}\\
+&\texttt{+0.50000  +0.50000  +0.00000}&\texttt{\# S}\\
+&\texttt{+0.00000  +0.50000  +0.00000}&\texttt{\# Y}\\
+&\texttt{+0.00000  +0.00000  +0.00000}&\texttt{\# \$\textbackslash Gamma\$}\\
+&\texttt{+0.00000  +0.00000  +0.50000}&\texttt{\# Z}\\
+&\texttt{+0.50000  +0.00000  +0.50000}&\texttt{\# U}\\
+&\texttt{+0.50000  +0.50000  +0.50000}&\texttt{\# R}\\
+&\texttt{+0.00000  +0.50000  +0.50000}&\texttt{\# T}\\
+&\texttt{+0.00000  +0.00000  +0.50000}&\texttt{\# Z}\\
+&\texttt{+0.00000  +0.50000  +0.00000}&\texttt{\# Y}\\
+&\texttt{+0.00000  +0.50000  +0.50000}&\texttt{\# T}\\
+&\texttt{+0.50000  +0.00000  +0.50000}&\texttt{\# U}\\
+&\texttt{+0.50000  +0.00000  +0.00000}&\texttt{\# X}\\
+&\texttt{+0.50000  +0.50000  +0.00000}&\texttt{\# S}\\
+&\texttt{+0.50000  +0.50000  +0.50000}&\texttt{\# R}\\
+\texttt{tolwfr2}&\texttt{1.0d-12}&\\
+\texttt{enunit2}&\texttt{1}&\texttt{\# to get the energies in eV}\\
+\end{tabular}
+\end{center}
 \end{document}

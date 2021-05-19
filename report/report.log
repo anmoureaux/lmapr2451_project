@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.25)  18 MAY 2021 21:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.25)  19 MAY 2021 02:37
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -740,7 +740,7 @@ LaTeX Info: Redefining \nameref on input line 48.
 \@outlinefile=\write4
 \openout4 = `report.out'.
 
-<images/epl2.png, id=79, 1204.5pt x 328.22626pt>
+<images/epl2.png, id=87, 1204.5pt x 328.22626pt>
 File: images/epl2.png Graphic file (type png)
 <use images/epl2.png>
 Package pdftex.def Info: images/epl2.png  used on input line 53.
@@ -777,17 +777,17 @@ been already used, duplicate ignored
                    \relax 
 l.95 \newpage
               [1]
-<images/pyrite.png, id=120, 104.7915pt x 88.4103pt>
+<images/pyrite.png, id=130, 104.7915pt x 88.4103pt>
 File: images/pyrite.png Graphic file (type png)
 <use images/pyrite.png>
 Package pdftex.def Info: images/pyrite.png  used on input line 104.
 (pdftex.def)             Requested size: 203.83417pt x 171.98654pt.
-<images/marcassite.jpg, id=121, 642.4pt x 427.5975pt>
+<images/marcassite.jpg, id=131, 642.4pt x 427.5975pt>
 File: images/marcassite.jpg Graphic file (type jpg)
 <use images/marcassite.jpg>
 Package pdftex.def Info: images/marcassite.jpg  used on input line 111.
 (pdftex.def)             Requested size: 203.83417pt x 135.6726pt.
-<images/pnjunction.png, id=127, 383.031pt x 173.9298pt>
+<images/pnjunction.png, id=137, 383.031pt x 173.9298pt>
 File: images/pnjunction.png Graphic file (type png)
 <use images/pnjunction.png>
 Package pdftex.def Info: images/pnjunction.png  used on input line 129.
@@ -802,18 +802,30 @@ Overfull \hbox (52.25182pt too wide) in paragraph at lines 145--159
  [] 
  []
 
-<images/primitiveCell.png, id=165, 211.0284pt x 198.7425pt>
-File: images/primitiveCell.png Graphic file (type png)
-<use images/primitiveCell.png>
-Package pdftex.def Info: images/primitiveCell.png  used on input line 163.
-(pdftex.def)             Requested size: 276.31068pt x 260.25752pt.
-[4 <./images/primitiveCell.png>]
+Package epstopdf Info: Source file: <images/primitiveCell.eps>
+(epstopdf)                    date: 2021-05-19 01:27:05
+(epstopdf)                    size: 4770805 bytes
+(epstopdf)             Output file: <images/primitiveCell-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2021-05-19 01:28:33
+(epstopdf)                    size: 512653 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/primitiveCell-eps-co
+nverted-to.pdf images/primitiveCell.eps>
+(epstopdf)             \includegraphics on input line 163.
+Package epstopdf Info: Output file is already uptodate.
+<images/primitiveCell-eps-converted-to.pdf, id=175, 1612.0225pt x 743.77875pt>
+File: images/primitiveCell-eps-converted-to.pdf Graphic file (type pdf)
+<use images/primitiveCell-eps-converted-to.pdf>
+Package pdftex.def Info: images/primitiveCell-eps-converted-to.pdf  used on inp
+ut line 163.
+(pdftex.def)             Requested size: 452.9679pt x 208.99432pt.
+[4 <./images/primitiveCell-eps-converted-to.pdf>]
 Overfull \hbox (68.96878pt too wide) in paragraph at lines 180--193
  [] 
  []
 
 [5]
-<images/etotecut.pdf, id=186, 1387.58403pt x 706.0779pt>
+<images/etotecut.pdf, id=199, 1387.58403pt x 706.0779pt>
 File: images/etotecut.pdf Graphic file (type pdf)
 <use images/etotecut.pdf>
 Package pdftex.def Info: images/etotecut.pdf  used on input line 206.
@@ -827,7 +839,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 213.
 
-<images/etotngkpt.pdf, id=189, 1387.58403pt x 706.0779pt>
+<images/etotngkpt.pdf, id=202, 1387.58403pt x 706.0779pt>
 File: images/etotngkpt.pdf Graphic file (type pdf)
 <use images/etotngkpt.pdf>
 Package pdftex.def Info: images/etotngkpt.pdf  used on input line 217.
@@ -835,7 +847,7 @@ Package pdftex.def Info: images/etotngkpt.pdf  used on input line 217.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/acellConv.png, id=192, 1387.584pt x 706.0779pt>
+<images/acellConv.png, id=205, 1387.584pt x 706.0779pt>
 File: images/acellConv.png Graphic file (type png)
 <use images/acellConv.png>
 Package pdftex.def Info: images/acellConv.png  used on input line 233.
@@ -849,51 +861,92 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 237.
 
-<images/acellNgkpt.pdf, id=254, 1387.58403pt x 706.0779pt>
+<images/acellNgkpt.pdf, id=267, 1387.58403pt x 706.0779pt>
 File: images/acellNgkpt.pdf Graphic file (type pdf)
 <use images/acellNgkpt.pdf>
 Package pdftex.def Info: images/acellNgkpt.pdf  used on input line 241.
 (pdftex.def)             Requested size: 452.9679pt x 230.49611pt.
 [7 <./images/etotngkpt.pdf>] [8 <./images/acellConv.png> <./images/acellNgkpt.p
 df>]
-<images/bs.pdf, id=362, 1387.58403pt x 706.0779pt>
+<images/bz.png, id=376, 477.785pt x 350.30875pt>
+File: images/bz.png Graphic file (type png)
+<use images/bz.png>
+Package pdftex.def Info: images/bz.png  used on input line 308.
+(pdftex.def)             Requested size: 181.18439pt x 132.84074pt.
+
+
+LaTeX Warning: Citation `bzw' on page 9 undefined on input line 309.
+
+
+LaTeX Warning: Citation `bzw' on page 9 undefined on input line 309.
+
+[9 <./images/bz.png>]
+<images/bs.pdf, id=389, 1387.58403pt x 706.0779pt>
 File: images/bs.pdf Graphic file (type pdf)
 <use images/bs.pdf>
-Package pdftex.def Info: images/bs.pdf  used on input line 316.
-(pdftex.def)             Requested size: 452.9679pt x 230.49611pt.
- [9 <./images/bs.pdf>] [10] (./report.bbl) [11]
-Overfull \hbox (57.91019pt too wide) in paragraph at lines 348--380
- [] 
- []
-
-[12]
-Overfull \hbox (57.91019pt too wide) in paragraph at lines 386--422
+Package pdftex.def Info: images/bs.pdf  used on input line 340.
+(pdftex.def)             Requested size: 407.66833pt x 207.44003pt.
+<images/chart.pdf, id=390, 1204.5pt x 1003.75pt>
+File: images/chart.pdf Graphic file (type pdf)
+<use images/chart.pdf>
+Package pdftex.def Info: images/chart.pdf  used on input line 346.
+(pdftex.def)             Requested size: 407.66829pt x 231.25586pt.
+ [10 <./images/bs.pdf> <./images/chart.pdf>] [11]
+(./report.bbl) [12]
+Overfull \hbox (57.91019pt too wide) in paragraph at lines 378--410
  [] 
  []
 
 [13]
-Overfull \hbox (57.91019pt too wide) in paragraph at lines 428--464
+Overfull \hbox (57.91019pt too wide) in paragraph at lines 416--452
  [] 
  []
 
 [14]
-Overfull \hbox (57.91019pt too wide) in paragraph at lines 470--509
+Overfull \hbox (57.91019pt too wide) in paragraph at lines 458--494
  [] 
  []
 
-[15] (./report.aux)
+[15]
+Overfull \hbox (57.91019pt too wide) in paragraph at lines 500--539
+ [] 
+ []
+
+[16]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 541.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 541.
+
+[17]
+Overfull \hbox (68.2855pt too wide) in paragraph at lines 569--613
+[] 
+ []
+
+[18]
+Overfull \hbox (1.7516pt too wide) in paragraph at lines 617--666
+ [] 
+ []
+
+[19] (./report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: FFAC1A47C7452C9897918C16AA4FFC33;1531.
+(rerunfilecheck)             Checksum: E84EAF4158B03BF79F515250583F2BF5;1691.
  ) 
 Here is how much of TeX's memory you used:
- 19564 strings out of 479304
- 385763 string characters out of 5869779
- 676975 words of memory out of 5000000
- 36293 multiletter control sequences out of 15000+600000
- 453688 words of font info for 89 fonts, out of 8000000 for 9000
+ 19597 strings out of 479304
+ 386293 string characters out of 5869779
+ 679294 words of memory out of 5000000
+ 36314 multiletter control sequences out of 15000+600000
+ 455367 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,11n,102p,1367b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
@@ -910,14 +963,15 @@ pe1/public/cm-super/sfrb1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sfrb1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/s
 hare/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/typ
 e1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
-frm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/sh
-are/texmf/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texmf/fonts/type
-1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
-tt1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on report.pdf (16 pages, 1298615 bytes).
+frm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftc1095.pfb></usr/sh
+are/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sftt0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
+tt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/sha
+re/texmf/fonts/type1/public/cm-super/sftt1440.pfb>
+Output written on report.pdf (20 pages, 1681796 bytes).
 PDF statistics:
- 534 PDF objects out of 1000 (max. 8388607)
- 316 compressed objects within 4 object streams
- 55 named destinations out of 1000 (max. 500000)
- 207 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 595 PDF objects out of 1000 (max. 8388607)
+ 364 compressed objects within 4 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 233 words of extra memory for PDF output out of 10000 (max. 10000000)
 

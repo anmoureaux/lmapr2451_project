@@ -16,3 +16,5 @@
 \BOOKMARK [1][-]{appendix.B}{Convergence of the total energy per atom as a function of ngkpt}{}% 16
 \BOOKMARK [1][-]{appendix.C}{Convergence of the lattice scale parameters as a function of ecut}{}% 17
 \BOOKMARK [1][-]{appendix.D}{Convergence of the lattice scale parameters as a function of ngkpt}{}% 18
+\BOOKMARK [1][-]{appendix.E}{Band structure : k-path generation using Absitruct \(Abipy\)}{}% 19
+\BOOKMARK [1][-]{appendix.F}{Band structure computation}{}% 20

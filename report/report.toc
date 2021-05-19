@@ -10,9 +10,11 @@
 \contentsline {subsection}{\numberline {2.6}Summary}{7}{subsection.2.6}%
 \contentsline {section}{\numberline {3}Optical properties}{9}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Electronic band structure}{9}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Comparison with the litterature}{10}{section.4}%
-\contentsline {section}{\numberline {5}Conclusion}{11}{section.5}%
-\contentsline {section}{\numberline {A}Convergence of the total energy per atom as a function of \texttt {ecut}}{12}{appendix.A}%
-\contentsline {section}{\numberline {B}Convergence of the total energy per atom as a function of \texttt {ngkpt}}{13}{appendix.B}%
-\contentsline {section}{\numberline {C}Convergence of the lattice scale parameters as a function of \texttt {ecut}}{14}{appendix.C}%
-\contentsline {section}{\numberline {D}Convergence of the lattice scale parameters as a function of \texttt {ngkpt}}{15}{appendix.D}%
+\contentsline {section}{\numberline {4}Comparison with the litterature}{11}{section.4}%
+\contentsline {section}{\numberline {5}Conclusion}{12}{section.5}%
+\contentsline {section}{\numberline {A}Convergence of the total energy per atom as a function of \texttt {ecut}}{13}{appendix.A}%
+\contentsline {section}{\numberline {B}Convergence of the total energy per atom as a function of \texttt {ngkpt}}{14}{appendix.B}%
+\contentsline {section}{\numberline {C}Convergence of the lattice scale parameters as a function of \texttt {ecut}}{15}{appendix.C}%
+\contentsline {section}{\numberline {D}Convergence of the lattice scale parameters as a function of \texttt {ngkpt}}{16}{appendix.D}%
+\contentsline {section}{\numberline {E}Band structure : $k$-path generation using Absitruct (Abipy)}{17}{appendix.E}%
+\contentsline {section}{\numberline {F}Band structure computation}{19}{appendix.F}%
