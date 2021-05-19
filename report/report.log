@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.25)  19 MAY 2021 02:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.25)  19 MAY 2021 16:49
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -740,7 +740,7 @@ LaTeX Info: Redefining \nameref on input line 48.
 \@outlinefile=\write4
 \openout4 = `report.out'.
 
-<images/epl2.png, id=87, 1204.5pt x 328.22626pt>
+<images/epl2.png, id=95, 1204.5pt x 328.22626pt>
 File: images/epl2.png Graphic file (type png)
 <use images/epl2.png>
 Package pdftex.def Info: images/epl2.png  used on input line 53.
@@ -765,7 +765,7 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 
 LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 15.
+(Font)              using `T1/cmtt/m/n' instead on input line 16.
 
 )
 \tf@toc=\write5
@@ -777,17 +777,17 @@ been already used, duplicate ignored
                    \relax 
 l.95 \newpage
               [1]
-<images/pyrite.png, id=130, 104.7915pt x 88.4103pt>
+<images/pyrite.png, id=140, 104.7915pt x 88.4103pt>
 File: images/pyrite.png Graphic file (type png)
 <use images/pyrite.png>
 Package pdftex.def Info: images/pyrite.png  used on input line 104.
 (pdftex.def)             Requested size: 203.83417pt x 171.98654pt.
-<images/marcassite.jpg, id=131, 642.4pt x 427.5975pt>
+<images/marcassite.jpg, id=141, 642.4pt x 427.5975pt>
 File: images/marcassite.jpg Graphic file (type jpg)
 <use images/marcassite.jpg>
 Package pdftex.def Info: images/marcassite.jpg  used on input line 111.
 (pdftex.def)             Requested size: 203.83417pt x 135.6726pt.
-<images/pnjunction.png, id=137, 383.031pt x 173.9298pt>
+<images/pnjunction.png, id=147, 383.031pt x 173.9298pt>
 File: images/pnjunction.png Graphic file (type png)
 <use images/pnjunction.png>
 Package pdftex.def Info: images/pnjunction.png  used on input line 129.
@@ -813,7 +813,7 @@ Package epstopdf Info: Source file: <images/primitiveCell.eps>
 nverted-to.pdf images/primitiveCell.eps>
 (epstopdf)             \includegraphics on input line 163.
 Package epstopdf Info: Output file is already uptodate.
-<images/primitiveCell-eps-converted-to.pdf, id=175, 1612.0225pt x 743.77875pt>
+<images/primitiveCell-eps-converted-to.pdf, id=185, 1612.0225pt x 743.77875pt>
 File: images/primitiveCell-eps-converted-to.pdf Graphic file (type pdf)
 <use images/primitiveCell-eps-converted-to.pdf>
 Package pdftex.def Info: images/primitiveCell-eps-converted-to.pdf  used on inp
@@ -825,7 +825,7 @@ Overfull \hbox (68.96878pt too wide) in paragraph at lines 180--193
  []
 
 [5]
-<images/etotecut.pdf, id=199, 1387.58403pt x 706.0779pt>
+<images/etotecut.pdf, id=209, 1387.58403pt x 706.0779pt>
 File: images/etotecut.pdf Graphic file (type pdf)
 <use images/etotecut.pdf>
 Package pdftex.def Info: images/etotecut.pdf  used on input line 206.
@@ -839,7 +839,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 213.
 
-<images/etotngkpt.pdf, id=202, 1387.58403pt x 706.0779pt>
+<images/etotngkpt.pdf, id=212, 1387.58403pt x 706.0779pt>
 File: images/etotngkpt.pdf Graphic file (type pdf)
 <use images/etotngkpt.pdf>
 Package pdftex.def Info: images/etotngkpt.pdf  used on input line 217.
@@ -847,7 +847,7 @@ Package pdftex.def Info: images/etotngkpt.pdf  used on input line 217.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/acellConv.png, id=205, 1387.584pt x 706.0779pt>
+<images/acellConv.png, id=215, 1387.584pt x 706.0779pt>
 File: images/acellConv.png Graphic file (type png)
 <use images/acellConv.png>
 Package pdftex.def Info: images/acellConv.png  used on input line 233.
@@ -861,14 +861,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 237.
 
-<images/acellNgkpt.pdf, id=267, 1387.58403pt x 706.0779pt>
+<images/acellNgkpt.pdf, id=277, 1387.58403pt x 706.0779pt>
 File: images/acellNgkpt.pdf Graphic file (type pdf)
 <use images/acellNgkpt.pdf>
 Package pdftex.def Info: images/acellNgkpt.pdf  used on input line 241.
 (pdftex.def)             Requested size: 452.9679pt x 230.49611pt.
 [7 <./images/etotngkpt.pdf>] [8 <./images/acellConv.png> <./images/acellNgkpt.p
 df>]
-<images/bz.png, id=376, 477.785pt x 350.30875pt>
+<images/bz.png, id=386, 477.785pt x 350.30875pt>
 File: images/bz.png Graphic file (type png)
 <use images/bz.png>
 Package pdftex.def Info: images/bz.png  used on input line 308.
@@ -881,57 +881,63 @@ LaTeX Warning: Citation `bzw' on page 9 undefined on input line 309.
 LaTeX Warning: Citation `bzw' on page 9 undefined on input line 309.
 
 [9 <./images/bz.png>]
-<images/bs.pdf, id=389, 1387.58403pt x 706.0779pt>
+<images/bs.pdf, id=400, 1387.58403pt x 706.0779pt>
 File: images/bs.pdf Graphic file (type pdf)
 <use images/bs.pdf>
 Package pdftex.def Info: images/bs.pdf  used on input line 340.
-(pdftex.def)             Requested size: 407.66833pt x 207.44003pt.
-<images/chart.pdf, id=390, 1204.5pt x 1003.75pt>
-File: images/chart.pdf Graphic file (type pdf)
-<use images/chart.pdf>
-Package pdftex.def Info: images/chart.pdf  used on input line 346.
-(pdftex.def)             Requested size: 407.66829pt x 231.25586pt.
- [10 <./images/bs.pdf> <./images/chart.pdf>] [11]
-(./report.bbl) [12]
-Overfull \hbox (57.91019pt too wide) in paragraph at lines 378--410
- [] 
- []
-
-[13]
-Overfull \hbox (57.91019pt too wide) in paragraph at lines 416--452
+(pdftex.def)             Requested size: 452.9679pt x 230.49611pt.
+<images/bsCombined.pdf, id=401, 1204.01822pt x 1003.10759pt>
+File: images/bsCombined.pdf Graphic file (type pdf)
+<use images/bsCombined.pdf>
+Package pdftex.def Info: images/bsCombined.pdf  used on input line 346.
+(pdftex.def)             Requested size: 452.9679pt x 377.37361pt.
+ [10 <./images/bs.pdf>] [11 <./images/bscombined.pdf>]
+[12] (./report.bbl) [13]
+Overfull \hbox (57.91019pt too wide) in paragraph at lines 379--411
  [] 
  []
 
 [14]
-Overfull \hbox (57.91019pt too wide) in paragraph at lines 458--494
+Overfull \hbox (57.91019pt too wide) in paragraph at lines 417--453
  [] 
  []
 
 [15]
-Overfull \hbox (57.91019pt too wide) in paragraph at lines 500--539
+Overfull \hbox (57.91019pt too wide) in paragraph at lines 459--495
  [] 
  []
 
 [16]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 541.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 541.
-
-[17]
-Overfull \hbox (68.2855pt too wide) in paragraph at lines 569--613
-[] 
- []
-
-[18]
-Overfull \hbox (1.7516pt too wide) in paragraph at lines 617--666
+Overfull \hbox (57.91019pt too wide) in paragraph at lines 501--540
  [] 
  []
 
-[19] (./report.aux)
+[17]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 542.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 542.
+
+[18]
+Overfull \hbox (68.2855pt too wide) in paragraph at lines 570--614
+[] 
+ []
+
+[19]
+Overfull \hbox (1.7516pt too wide) in paragraph at lines 618--667
+ [] 
+ []
+
+[20]
+<images/chart.pdf, id=522, 1204.5pt x 1003.75pt>
+File: images/chart.pdf Graphic file (type pdf)
+<use images/chart.pdf>
+Package pdftex.def Info: images/chart.pdf  used on input line 673.
+(pdftex.def)             Requested size: 452.9679pt x 377.47745pt.
+ [21 <./images/chart.pdf>] (./report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -939,13 +945,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: E84EAF4158B03BF79F515250583F2BF5;1691.
+(rerunfilecheck)             Checksum: D64964EB93DE3A73AA225D5B4EDE92B7;1840.
  ) 
 Here is how much of TeX's memory you used:
- 19597 strings out of 479304
- 386293 string characters out of 5869779
- 679294 words of memory out of 5000000
- 36314 multiletter control sequences out of 15000+600000
+ 19611 strings out of 479304
+ 386552 string characters out of 5869779
+ 679381 words of memory out of 5000000
+ 36322 multiletter control sequences out of 15000+600000
  455367 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,11n,102p,1367b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -968,10 +974,10 @@ are/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type
 1/public/cm-super/sftt0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
 tt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/sha
 re/texmf/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on report.pdf (20 pages, 1681796 bytes).
+Output written on report.pdf (22 pages, 2376176 bytes).
 PDF statistics:
- 595 PDF objects out of 1000 (max. 8388607)
- 364 compressed objects within 4 object streams
- 63 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 631 PDF objects out of 1000 (max. 8388607)
+ 392 compressed objects within 4 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 254 words of extra memory for PDF output out of 10000 (max. 10000000)
 

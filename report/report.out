@@ -10,11 +10,13 @@
 \BOOKMARK [2][-]{subsection.2.6}{Summary}{section.2}% 10
 \BOOKMARK [1][-]{section.3}{Optical properties}{}% 11
 \BOOKMARK [2][-]{subsection.3.1}{Electronic band structure}{section.3}% 12
-\BOOKMARK [1][-]{section.4}{Comparison with the litterature}{}% 13
-\BOOKMARK [1][-]{section.5}{Conclusion}{}% 14
-\BOOKMARK [1][-]{appendix.A}{Convergence of the total energy per atom as a function of ecut}{}% 15
-\BOOKMARK [1][-]{appendix.B}{Convergence of the total energy per atom as a function of ngkpt}{}% 16
-\BOOKMARK [1][-]{appendix.C}{Convergence of the lattice scale parameters as a function of ecut}{}% 17
-\BOOKMARK [1][-]{appendix.D}{Convergence of the lattice scale parameters as a function of ngkpt}{}% 18
-\BOOKMARK [1][-]{appendix.E}{Band structure : k-path generation using Absitruct \(Abipy\)}{}% 19
-\BOOKMARK [1][-]{appendix.F}{Band structure computation}{}% 20
+\BOOKMARK [2][-]{subsection.3.2}{Electronic density of states}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{Comparison with the litterature}{}% 14
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 15
+\BOOKMARK [1][-]{appendix.A}{Convergence of the total energy per atom as a function of ecut}{}% 16
+\BOOKMARK [1][-]{appendix.B}{Convergence of the total energy per atom as a function of ngkpt}{}% 17
+\BOOKMARK [1][-]{appendix.C}{Convergence of the lattice scale parameters as a function of ecut}{}% 18
+\BOOKMARK [1][-]{appendix.D}{Convergence of the lattice scale parameters as a function of ngkpt}{}% 19
+\BOOKMARK [1][-]{appendix.E}{Band structure : k-path generation using Absitruct \(Abipy\)}{}% 20
+\BOOKMARK [1][-]{appendix.F}{Band structure computation}{}% 21
+\BOOKMARK [1][-]{appendix.G}{Band structure : Materials Project}{}% 22

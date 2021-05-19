@@ -321,7 +321,7 @@ The input file \texttt{1522\_14\_bs.abi} is available in \autoref{Abi6}.
 
 
 
-The band structure is represented on \autoref{fig:bs}. The Fermi energy and the energy of the bandgap were also retrieved from the computed data. It is compared below with the data from the Materials Project \cite{MaterialsProject}. The band structure provided by the Materials Project is also displayed for comparison on \autoref{fig:bsMP}.
+The band structure is represented on \autoref{fig:bs}. The Fermi energy and the energy of the bandgap were also retrieved from the computed data. It is compared below with the data from the Materials Project \cite{MaterialsProject}. The band structure provided by the Materials Project, which can be found in \autoref{Abi7}, is compared with the computed one on \autoref{fig:bsMPCombined}.
 
 Besides a difference of $2.45$ eV concerning the Fermi energies, the results of the computation seems consistent regarding the data of the Materials Project. \textbf{\textcolor{red}{why ???}}
 \begin{center}
@@ -337,16 +337,17 @@ Besides a difference of $2.45$ eV concerning the Fermi energies, the results of 
 \end{center}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.9\textwidth]{images/bs.pdf}
+\includegraphics[width=\textwidth]{images/bs.pdf}
 \caption{Band structure of \ch{FeS2}. The red dots represent the valence band minimums and the conduction band maximum.}
 \label{fig:bs}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}
 \centering
-\includegraphics[width=0.9\textwidth,height=3.2in]{images/chart.pdf}
-\caption{Band structure of \ch{FeS2} provided by the Materials Project.}
-\label{fig:bsMP}
+\includegraphics[width=\textwidth]{images/bsCombined.pdf}
+\caption{Blue : Band structure provided by the Materials Project. Red : Computed band structure.}
+\label{fig:bsMPCombined}
 \end{figure}
+\subsection{Electronic density of states}
 
 \textcolor{blue}{
 \textbackslash\textbackslash TODO\\
@@ -664,4 +665,12 @@ Output :\\
 \texttt{enunit2}&\texttt{1}&\texttt{\# to get the energies in eV}\\
 \end{tabular}
 \end{center}
+\newpage
+\section{Band structure : Materials Project}
+\label{Abi7}
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{images/chart.pdf}
+\caption{Band structure of orthorhombic \ch{FeS2} provided by the Materials Project}
+\end{figure}
 \end{document}
