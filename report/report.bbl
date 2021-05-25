@@ -80,4 +80,37 @@ Materials project, "mp-1522: Fes2 (orthorhombic, pnnm, 58)". Accessed:
 D.~Hamann, ``Optimized norm-conserving vanderbilt pseudopotentials,''
   \emph{Physical Review B}, vol.~88, 06 2013.
 
+\bibitem{AbinitManual}
+\BIBentryALTinterwordspacing
+\relax{The Abinit Group}. (2020-2021) Variables abinit file-handling - prtdos.
+  [Online]. Available: \url{https://docs.abinit.org/variables/files/#prtdos}
+\BIBentrySTDinterwordspacing
+
+\bibitem{TMD1}
+B.~Bradlyn, L.~Elcoro, J.~Cano, M.~G. Vergniory, Z.~Wang, C.~Felser, M.~I.
+  Aroyo, and B.~A. Bernevig, ``Topological quantum chemistry,'' \emph{Nature},
+  no. 547, July 2017.
+
+\bibitem{TMD2}
+M.~G. Vergniory, L.~Elcoro, C.~Felser, N.~Regnault, B.~A. Bernevig, and
+  Z.~Wang, ``A complete catalogue of high-quality topological materials,''
+  \emph{Nature}, no. 566, pp. 480--485, February 2019.
+
+\bibitem{TMD3}
+M.~G. Vergniory, B.~J. Wieder, L.~Elcoro, S.~S.~P. Parkin, C.~Felser, B.~A.
+  Bernevig, and N.~Regnault, ``All topological bands of all stoichiometric
+  materials,'' May 2021.
+
+\bibitem{TMD4}
+\BIBentryALTinterwordspacing
+Topological materials database. Accessed: 25-05-2021. [Online]. Available:
+  \url{https://topologicalquantumchemistry.org/#/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{TMD5}
+\BIBentryALTinterwordspacing
+Bilbao crystallographic server. Accessed: 25-05-2021. [Online]. Available:
+  \url{https://www.cryst.ehu.es/}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}
