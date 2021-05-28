@@ -306,7 +306,7 @@ The band structure of the material was computed as follows. First, an optimal $k
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.4\textwidth]{images/bz.png}
-\caption{Brillouin zone for a simple orthorhombic lattice \cite{bzw}}
+\caption{Brillouin zone for a simple orthorhombic lattice \cite{bz}}
 \label{fig:orcBZ}
 \end{figure}
 
@@ -392,7 +392,7 @@ Then, the plot of the electronic DOS was displayed using a handmade \texttt{Pyth
 \centering
 \includegraphics[width=\textwidth]{images/dos3.png}
 \caption{Electronic DOS provided by the Topological Materials Database}
-\label{fig:dos4}
+\label{fig:dos3}
 \end{subfigure}
 \caption{Comparison of less smeared DOS patterns}
 \label{fig:dosLessSmeared}
@@ -404,16 +404,54 @@ One can see here that the plots also show the same features. Some differences ca
 \item On the plot obtained with \texttt{Python}, peaks of high amplitude can be seen at several energies (for example just below the bandgap). After further investigation, the peaks span until a DOS of $\sim$ 65 states/eV, implying that the amplitude of those peaks is probably a computational artefact. Such peaks are not visible on the other plot, because it has been smeared a little, demonstrating the utility of the smearing of the plot of the electronic DOS.
 \end{itemize}
 
-\textcolor{blue}{
-\textbackslash\textbackslash TODO\\
-- compute the phonon dispersion\\
-- Implications for a thin film used in a solar cell}
-\newpage
-\section{Comparison with the litterature}
-\textcolor{blue}{
-\textbackslash\textbackslash TODO\\
-- Compare with the material project + other sources if needed\\
-- Discuss the differences and the similitudes}
+\subsection{Phonon dispersion}
+The phonon dispersion of the material was computed as follows. First, a list of convenient $q$-points has to be generated. This is done by generating a list of $k$-points. To do so, we run a standard SCF computation. However in this case the SCF procedure is dummy. Indeed, \texttt{nstep} and \texttt{nline} are set to \texttt{1}, preventing \texttt{Abinit} to run more than one iteration during the computation, as explained in \cite{tutoPhonons}. The input file is available in \autoref{Abi9}. Note that \texttt{shiftk} was set to \texttt{[0 0 0]} and not \texttt{[0.5 0.5 0.5]} as in the previous computations. This is done to force \texttt{Abinit} to include the $\Gamma$ point in the list to be generated.
+
+Once the list of $k$-points is generated, we use it as a list of $q$-points for the further computations. The next step is to compute the phonon spectrum over the obtained $q$-points. A few datasets are used : 
+\begin{itemize}
+\item The first one is a ground-state self-consistency computation that will be used for all the other datasets. 
+\item The second dataset is used to compute the response function of the $\frac{\text{d}}{\text{d}k}$ wave functions.
+\item The third one is used to compute the response function at $\Gamma$ of an electric field perturbation.
+\item The other datasets are used to compute the phonon response at the other $q$-points. As only one $q$-point can be considered at a time, we need as many additional datasets as $q$-points.
+\end{itemize}
+After the run, several databases will be generated, corresponding to the specified datasets. The input file is available in \autoref{Abi10}. Those databases are merged using the \texttt{MRGDDB} tool, then analyzed using the \texttt{ANADDB} tool. Then, using the generated \texttt{\_B2EPS.freq} file containing the frequencies for all the $q$-points of the specified $q$-path, it is possible to produce a final file containing the band structure.
+
+It was plotted using \texttt{Abipy} (\autoref{fig:phonon1}) and was compared with the phonon dispersion plot provided by the Materials Project (\autoref{fig:phonon2}).
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{images/phonon1.pdf}
+\caption{Computed phonon dispersion plotted with \texttt{Abipy}}
+\label{fig:phonon1}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{images/phonon2.pdf}
+\caption{Comparison between the computed phonon dispersion (in black) and the phonon dispersion obtained on the Materials Project (in blue). The superposition of the plots is not complete as the plot provided by the Materials Project is truncated at some $q$-points.}
+\label{fig:phonon2}
+\end{figure}
+
+\subsection{Phonon density of states}
+By setting \texttt{prtdos = 2}, it is possible to compute the phonon DOS using the tetrahedron method. The plot is obtained with \texttt{Abipy}, and is compared in \autoref{fig:phonondos} with the phonon DOS plot provided on the Materials Project. It can be seen that the results are in good agreement, as the plots show the same features, and only differ by the smearing level of the plot.
+
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.54\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/dos}
+\caption{Computed phonon DOS plotted using \texttt{Abipy}}
+\label{fig:phonondos1}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.36\textwidth}
+\centering
+\includegraphics[width=\textwidth]{images/phonon_dos.png}
+\caption{Phonon DOS provided by the Materials Project}
+\label{fig:phonondos2}
+\end{subfigure}
+\caption{Comparison of the phonon DOS}
+\label{fig:phonondos}
+\end{figure}
 \newpage
 \section{Conclusion}
 \textcolor{blue}{
@@ -764,15 +802,137 @@ Output :\\
 \texttt{kptopt1}&\texttt{1}&\\
 \texttt{nshiftk1}&\texttt{1}&\\
 \texttt{shiftk1}&\texttt{0 0 0}&\texttt{\# use of a non-shifted k-grid}\\
-\texttt{ngkpt1}&\texttt{8 8 8}&\texttt{\# converged value}\\
+\texttt{ngkpt1}&\texttt{8 8 8}&\texttt{\# higher than the converged value to}\\
+&&\texttt{\# obtain a good resolution in the}\\
+&&\texttt{\# DOS plot}\\
 \texttt{prtden1}&\texttt{1}&\\
-\multicolumn{3}{l}{\# second dataset : DOS computation}\\
+\multicolumn{3}{l}{\texttt{\# second dataset : DOS computation}}\\
 \texttt{prtdos2}&\texttt{2}&\texttt{\# computing the DOS using the}\\
 &&\texttt{\# wtetrahedron method}\\
 \texttt{getden2}&\texttt{-1}&\\
 \texttt{iscf2}&\texttt{-3}&\\
 \texttt{tolwfr2}&\texttt{1.0d-12}&\\
 \texttt{dosdeltae2}&\texttt{5.0d-5}&\\
+\end{tabular}
+\end{center}
+\newpage
+\section{Phonons : Generation of a list of $q$-points}
+\label{Abi9}
+\begin{center}
+\begin{tabular}{lll}
+\multicolumn{3}{l}{\texttt{\# Pnnm [58] FeS2 : computation of the q points}}\\
+\texttt{ngkpt} & \texttt{3 3 3} & \\
+\texttt{nshiftk} & \texttt{1} & \\
+\texttt{shiftk} & \texttt{0 0 0} & \\
+\multicolumn{3}{l}{\texttt{\# dummy SCF procedure}}\\
+\texttt{nstep} & \texttt{1} & \\
+\texttt{nline} & \texttt{1} & \\
+\texttt{diemac} &\texttt{24.0}\\
+\multicolumn{3}{l}{\texttt{\# common input variables}}\\
+\texttt{acell} & \texttt{1.0 1.0 1.0} & \\
+\texttt{rprim}&&\\
+&\texttt{6.2644421031    0.0000000000    0.0000000000}&\\
+&\texttt{0.0000000000    8.2010334357    0.0000000000}&\\
+&\texttt{0.0000000000    0.0000000000    9.9991078432}&\\
+\texttt{ntypat} & \texttt{2} & \\
+\texttt{znucl} & \texttt{26 16} & \\
+\texttt{pseudos}&\texttt{"Fe.psp8,S.psp8"}&\\
+\texttt{natom}&\texttt{6}&\\
+\texttt{typat}&\texttt{1 1 2 2 2 2}&\\
+\texttt{xred} &&\\
+&\texttt{0.0000000000    0.0000000000    0.0000000000}&\\
+&\texttt{0.5000000000    0.5000000000    0.5000000000}&\\
+&\texttt{0.0000000000    0.2080900000    0.3737400000}&\\
+&\texttt{0.0000000000    0.7919100000    0.6262600000}&\\
+&\texttt{0.5000000000    0.2919100000    0.8737400000}&\\
+&\texttt{0.5000000000    0.7080900000    0.1262600000}&\\
+\texttt{ecut} &\texttt{40.0}&\texttt{\# converged value}\\
+\texttt{nband} & \texttt{35} &\\
+\texttt{tolvrs} &\texttt{1.0d-18}&\texttt{\# dummy variable as there is only one}\\
+&&\texttt{\# step in the SCF procedure}
+\end{tabular}
+\end{center}
+\newpage
+\section{Phonons : Generation of the derivative databases}
+\label{Abi10}
+\begin{center}
+\begin{tabular}{lll}
+\texttt{ndtset} &\texttt{10}&\\
+\multicolumn{3}{l}{\texttt{\# dataset 1 : GS self-consistent computation}}\\
+\texttt{getwfk1} &\texttt{0}&\\
+\texttt{kptopt1} &\texttt{1}&\\
+\texttt{nqpt1} &\texttt{0}&\\
+\texttt{tolvrs1} &\texttt{1.0d-18}&\\
+\texttt{rfphon1} &\texttt{0}&\\
+\multicolumn{3}{l}{\texttt{\# Q vectors for all datasets}}\\
+\texttt{nqpt} &\texttt{1}&\\
+\texttt{qpt2} &\texttt{0.00000000E+00  0.00000000E+00  0.00000000E+00}&\\
+\texttt{qpt3} &\texttt{0.00000000E+00  0.00000000E+00  0.00000000E+00}&\\
+\texttt{qpt4} &\texttt{3.33333333E-01  0.00000000E+00  0.00000000E+00}&\\
+\texttt{qpt5} &\texttt{0.00000000E+00  3.33333333E-01  0.00000000E+00}&\\
+\texttt{qpt6} &\texttt{3.33333333E-01  3.33333333E-01  0.00000000E+00}&\\
+\texttt{qpt7} &\texttt{0.00000000E+00  0.00000000E+00  3.33333333E-01}&\\
+\texttt{qpt8} &\texttt{3.33333333E-01  0.00000000E+00  3.33333333E-01}&\\
+\texttt{qpt9} &\texttt{0.00000000E+00  3.33333333E-01  3.33333333E-01}&\\
+\texttt{qpt10} &\texttt{3.33333333E-01  3.33333333E-01  3.33333333E-01}&\\
+\multicolumn{3}{l}{\texttt{\# dataset 2 : response function calculation of d/dk wave function}}\\
+\texttt{iscf2} & \texttt{-3} & \\
+\texttt{kptopt2} & \texttt{2} & \\
+\texttt{rfphon2} & \texttt{0} & \\
+\texttt{rfelfd2} & \texttt{2} & \\
+\texttt{tolwfr2} & \texttt{1.0d-22} & \\
+\multicolumn{3}{l}{\texttt{\# dataset 3 : response function calculation at Q=0 phonons and electric field perturbation}}\\
+\texttt{getddk3} & \texttt{2} & \\
+\texttt{kptopt3} & \texttt{2} & \\
+\texttt{rfelfd3} & \texttt{3} & \\
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{lll}
+\multicolumn{3}{l}{\texttt{\# datasets 4-10 : finite-wave-vector phonon calculations (default for all datasets)}}\\
+\texttt{getwfk} & \texttt{1} & \\
+\texttt{kptopt} & \texttt{3} & \\
+\texttt{rfphon} & \texttt{1} & \\
+\texttt{rfatpol} & \texttt{1 6} & \\
+\texttt{rfdir} & \texttt{1 1 1} & \\
+\texttt{tolvrs} & \texttt{1.0d-18} & \\
+\texttt{ntypat}&\texttt{2}\\
+\texttt{znucl}&\texttt{26 16}\\
+\texttt{pseudo}&\texttt{"Fe.psp8,S.psp8"}&\\
+\texttt{natom}&\texttt{6}&\\
+\texttt{typat}&\texttt{1 1 2 2 2 2}&\\
+\texttt{xred} &\texttt{0.0000000000    0.0000000000    0.0000000000}&\\
+&\texttt{0.5000000000    0.5000000000    0.5000000000}&\\
+&\texttt{0.0000000000    0.2080900000    0.3737400000}&\\
+&\texttt{0.0000000000    0.7919100000    0.6262600000}&\\
+&\texttt{0.5000000000    0.2919100000    0.8737400000}&\\
+&\texttt{0.5000000000    0.7080900000    0.1262600000}&\\
+\texttt{ecut} &\texttt{40.0}&\\
+\texttt{nband}&\texttt{35}&\\
+\texttt{diemac}&\texttt{24.0}&\\
+\texttt{ngkpt}&\texttt{3 3 3}&\\\texttt{nshiftk}&\texttt{1}&\\\texttt{shiftk}&\texttt{0.5 0.5 0.5}&\\
+\end{tabular}
+\end{center}
+\newpage
+\section{Phonons : Computation of the band structure}
+\begin{center}
+\begin{tabular}{lll}
+\texttt{ifcflag}&\texttt{1}&\\
+\texttt{ifcout}&\texttt{0}&\\
+\texttt{brav}&\texttt{1}&\\
+\texttt{ngqpt}&\texttt{3 3 3}&\\
+\texttt{nqshift}&\texttt{1}&\\
+\texttt{q1shift}&\texttt{0.0 0.0 0.0}&\\
+\texttt{dipdip}&\texttt{1}&\\
+\texttt{eivec}&\texttt{4}&\\
+\texttt{prtdos}&\texttt{2}&\\
+\texttt{nph1l}&\texttt{401}&\\
+\multicolumn{3}{l}{\texttt{\# the q-path is not written for visual reasons}}\\
+\multicolumn{3}{l}{\texttt{\# \textbackslash Gamma-X-S-Y-\textbackslash Gamma-Z-U-R-T-Z-Y-T-U-X-S-R}}\\
+\multicolumn{3}{l}{\texttt{\# retrieved from the electronic bandstructure computation}}\\
+\texttt{nph2l}&\texttt{1}&\\
+\texttt{qph2l}&\texttt{1.0 1.0 1.0}&\\
+\texttt{ng2qpt}&\texttt{3 3 3}&\\
 \end{tabular}
 \end{center}
 \end{document}

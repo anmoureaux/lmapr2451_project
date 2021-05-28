@@ -80,6 +80,11 @@ Materials project, "mp-1522: Fes2 (orthorhombic, pnnm, 58)". Accessed:
 D.~Hamann, ``Optimized norm-conserving vanderbilt pseudopotentials,''
   \emph{Physical Review B}, vol.~88, 06 2013.
 
+\bibitem{bz}
+W.~Setyawan and S.~Curtarolo, ``High-throughput electronic band structure
+  calculations: Challenges and tools,'' \emph{Computational Materials Science},
+  no.~49, pp. 299--312, 2010.
+
 \bibitem{AbinitManual}
 \BIBentryALTinterwordspacing
 \relax{The Abinit Group}. (2020-2021) Variables abinit file-handling - prtdos.
@@ -111,6 +116,12 @@ Topological materials database. Accessed: 25-05-2021. [Online]. Available:
 \BIBentryALTinterwordspacing
 Bilbao crystallographic server. Accessed: 25-05-2021. [Online]. Available:
   \url{https://www.cryst.ehu.es/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{tutoPhonons}
+\BIBentryALTinterwordspacing
+Abinit, tutorial dfpt rf2. Accessed: 26-05-2021. [Online]. Available:
+  \url{https://docs.abinit.org/tutorial/rf2/}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
