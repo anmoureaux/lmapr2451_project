@@ -19,45 +19,45 @@ Warning--empty journal in limitations
 Warning--missing publisher in fox
 
 Done.
-You've used 22 entries,
+You've used 23 entries,
             4087 wiz_defined-function locations,
-            940 strings with 10331 characters,
-and the built_in function-call counts, 9573 in all, are:
-= -- 720
-> -- 167
-< -- 31
-+ -- 94
-- -- 32
-* -- 361
-:= -- 1586
-add.period$ -- 44
-call.type$ -- 22
-change.case$ -- 36
+            948 strings with 10438 characters,
+and the built_in function-call counts, 10131 in all, are:
+= -- 773
+> -- 176
+< -- 33
++ -- 98
+- -- 34
+* -- 386
+:= -- 1681
+add.period$ -- 46
+call.type$ -- 23
+change.case$ -- 37
 chr.to.int$ -- 69
-cite$ -- 24
-duplicate$ -- 766
-empty$ -- 871
-format.name$ -- 37
-if$ -- 2157
+cite$ -- 25
+duplicate$ -- 816
+empty$ -- 915
+format.name$ -- 40
+if$ -- 2287
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 173
-newline$ -- 117
-num.names$ -- 13
-pop$ -- 509
+int.to.str$ -- 23
+missing$ -- 181
+newline$ -- 120
+num.names$ -- 14
+pop$ -- 525
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 725
+skip$ -- 771
 stack$ -- 0
-substring$ -- 196
-swap$ -- 494
-text.length$ -- 8
+substring$ -- 203
+swap$ -- 532
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 22
+type$ -- 23
 warning$ -- 2
-while$ -- 21
-width$ -- 24
-write$ -- 222
+while$ -- 23
+width$ -- 25
+write$ -- 232
 (There were 4 warnings)

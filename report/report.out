@@ -17,16 +17,17 @@
 \BOOKMARK [1][-]{section.4}{Results and macroscopic implications}{}% 17
 \BOOKMARK [2][-]{subsection.4.1}{Dielectric tensor}{section.4}% 18
 \BOOKMARK [2][-]{subsection.4.2}{Band structure and band gap}{section.4}% 19
-\BOOKMARK [1][-]{section.5}{Conclusion}{}% 20
-\BOOKMARK [1][-]{appendix.A}{Convergence of the total energy per atom as a function of ecut}{}% 21
-\BOOKMARK [1][-]{appendix.B}{Convergence of the total energy per atom as a function of ngkpt}{}% 22
-\BOOKMARK [1][-]{appendix.C}{Convergence of the lattice scale parameters as a function of ecut}{}% 23
-\BOOKMARK [1][-]{appendix.D}{Convergence of the lattice scale parameters as a function of ngkpt}{}% 24
-\BOOKMARK [1][-]{appendix.E}{Band structure : k-path generation using Absitruct \(Abipy\)}{}% 25
-\BOOKMARK [1][-]{appendix.F}{Band structure computation}{}% 26
-\BOOKMARK [1][-]{appendix.G}{Band structure : Materials Project}{}% 27
-\BOOKMARK [1][-]{appendix.H}{Electronic density of states}{}% 28
-\BOOKMARK [1][-]{appendix.I}{Phonons : Generation of a list of q-points}{}% 29
-\BOOKMARK [1][-]{appendix.J}{Phonons : Generation of the derivative databases}{}% 30
-\BOOKMARK [1][-]{appendix.K}{Phonons : Computation of the band structure}{}% 31
-\BOOKMARK [1][-]{appendix.L}{Dielectric tensor computation}{}% 32
+\BOOKMARK [2][-]{subsection.4.3}{Optics}{section.4}% 20
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 21
+\BOOKMARK [1][-]{appendix.A}{Convergence of the total energy per atom as a function of ecut}{}% 22
+\BOOKMARK [1][-]{appendix.B}{Convergence of the total energy per atom as a function of ngkpt}{}% 23
+\BOOKMARK [1][-]{appendix.C}{Convergence of the lattice scale parameters as a function of ecut}{}% 24
+\BOOKMARK [1][-]{appendix.D}{Convergence of the lattice scale parameters as a function of ngkpt}{}% 25
+\BOOKMARK [1][-]{appendix.E}{Band structure : k-path generation using Absitruct \(Abipy\)}{}% 26
+\BOOKMARK [1][-]{appendix.F}{Band structure computation}{}% 27
+\BOOKMARK [1][-]{appendix.G}{Band structure : Materials Project}{}% 28
+\BOOKMARK [1][-]{appendix.H}{Electronic density of states}{}% 29
+\BOOKMARK [1][-]{appendix.I}{Phonons : Generation of a list of q-points}{}% 30
+\BOOKMARK [1][-]{appendix.J}{Phonons : Generation of the derivative databases}{}% 31
+\BOOKMARK [1][-]{appendix.K}{Phonons : Computation of the band structure}{}% 32
+\BOOKMARK [1][-]{appendix.L}{Dielectric tensor computation}{}% 33
