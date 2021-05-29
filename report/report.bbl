@@ -124,6 +124,25 @@ Abinit, tutorial dfpt rf2. Accessed: 26-05-2021. [Online]. Available:
   \url{https://docs.abinit.org/tutorial/rf2/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{irb}
+\BIBentryALTinterwordspacing
+Wikipedia, infrarouge. Accessed: 29-05-2021. [Online]. Available:
+  \url{https://fr.wikipedia.org/wiki/Infrarouge}
+\BIBentrySTDinterwordspacing
+
+\bibitem{MaterialsProjectPyrite}
+\BIBentryALTinterwordspacing
+Materials project, "mp-226: Fes2 (cubic, pa-3, 205)". Accessed: 29-05-2021.
+  [Online]. Available: \url{https://materialsproject.org/materials/mp-226/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{gaps}
+\BIBentryALTinterwordspacing
+Wikipedia, gap direct et gap indirect : Application en optoélectronique.
+  Accessed: 29-05-2021. [Online]. Available:
+  \url{https://fr.wikipedia.org/wiki/Gap_direct_et_gap_indirect}
+\BIBentrySTDinterwordspacing
+
 \bibitem{fox}
 M.~Fox, \emph{Optical Properties of Solids}, O.~U. Press, Ed., 2001.
 

@@ -302,6 +302,7 @@ and
 \end{center}
 \section{Optical properties}
 \subsection{Electronic band structure}
+\label{elecbs}
 The band structure of the material was computed as follows. First, an optimal $k$-path is generated in the Brillouin zone of a simple orthorhombic lattice \autoref{fig:orcBZ} using the \texttt{Abistruct} module of \texttt{Abipy} (\autoref{Abi5}). 
 
 \begin{figure}[h]
@@ -325,7 +326,8 @@ The input file \texttt{1522\_14\_bs.abi} is available in \autoref{Abi6}.
 The band structure is represented on \autoref{fig:bs}. The Fermi energy and the energy of the bandgap were also retrieved from the computed data. It is compared below with the data from the Materials Project \cite{MaterialsProject}. The band structure provided by the Materials Project, which can be found in \autoref{Abi7}, is compared with the computed one on \autoref{fig:bsMPCombined}.
 
 Besides a difference of $2.45$ eV concerning the Fermi energies, the results of the computation seems consistent regarding the data of the Materials Project. \textbf{\textcolor{red}{why ???}}
-\begin{center}
+\begin{table}
+\centering
 \begin{tabular}{|l|c|c|}
 \cline{2-3}
 \multicolumn{1}{l|}{}&\textbf{Computed}&\textbf{Materials Project}\\
@@ -335,7 +337,9 @@ Besides a difference of $2.45$ eV concerning the Fermi energies, the results of 
 \textbf{Band gap energy [eV]} & $0.8674$ & $0.8807$ \\
 \hline
 \end{tabular}
-\end{center}
+\caption{Comparison between the computed results and the data provided by the Materials Project}
+\label{tab:bg}
+\end{table}
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{images/bs.pdf}
@@ -507,6 +511,27 @@ The value of the electric susceptibility naturally follows \autoref{eqn:dielectr
 \chi = \varepsilon_r-1 = 19.693
 \end{equation}
 \subsection{Band structure and band gap}
+As seen in \autoref{elecbs}, the band gap is indirect as the initial wavevector is $(0, 0.4, 0)$ and the final wavevector is $(0, 0, 0)$. The change of wavevector is represented on \autoref{fig:kbz}. The computed energy of the band gap is $0.8674$ eV (\autoref{tab:bg}). In a semiconducting material, the electrons of the last valence band are able to jump in the first conduction band by interacting with an incident photon and absorbing its energy. The energy of the interacting photons must be equal to that one of the bandgap in order to be absorbed by the electrons. It is thus possible to know the frequency of the absorbed light : 
+\begin{equation}
+\label{bgE}
+E = h\nu
+\end{equation}
+with $h$ the Planck's constant and $\nu$ the frequency of the interacting photons. We get 
+\begin{align}
+\label{angfreq}
+\nu &= \dfrac{0.8674\times 1.60218\times 10^{-19}}{6.62607\times 10^{-34}}\\
+&= 2.09737\times 10^{14}\text{\space Hz}\\
+&=209.737 \texttt{\space THz}
+\end{align}
+It corresponds to IR-B photons \cite{irb}.
+\begin{figure}
+\centering
+\includegraphics[width=0.3\textwidth]{images/kbz}
+\caption{Brillouin zone for a simple orthorhombic lattice. The change of wavevector through the band gap is represented by the green arrow.}
+\label{fig:kbz}
+\end{figure}
+
+Although the material studied here is not candidate for future photovoltaic applications, its cubic polymorph, \textit{pyrite}, is. The band gap of the latter material is also indirect \cite{MaterialsProjectPyrite}. It means that in order to generate a free electron-hole pair, one electron of the last valence band will have to interact with an incident photon and a phonon of the crystal lattice. In conclusion, that kind of event is far more uncommon than for a direct bandgap, and the photons will penetrate deeper in the material before being absorbed. So in order to absorbed as much light as possible, the layer of material will have to be sufficiently thick \cite{gaps}.
 \section{Conclusion}
 \textcolor{blue}{
 \textbackslash\textbackslash TODO\\
