@@ -12,16 +12,18 @@
 \contentsline {subsection}{\numberline {3.1}Electronic band structure}{9}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Electronic density of states (DOS)}{10}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Phonon dispersion}{13}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Phonon density of states}{14}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Conclusion}{17}{section.4}%
-\contentsline {section}{\numberline {A}Convergence of the total energy per atom as a function of \texttt {ecut}}{19}{appendix.A}%
-\contentsline {section}{\numberline {B}Convergence of the total energy per atom as a function of \texttt {ngkpt}}{20}{appendix.B}%
-\contentsline {section}{\numberline {C}Convergence of the lattice scale parameters as a function of \texttt {ecut}}{21}{appendix.C}%
-\contentsline {section}{\numberline {D}Convergence of the lattice scale parameters as a function of \texttt {ngkpt}}{22}{appendix.D}%
-\contentsline {section}{\numberline {E}Band structure : $k$-path generation using Absitruct (Abipy)}{23}{appendix.E}%
-\contentsline {section}{\numberline {F}Band structure computation}{25}{appendix.F}%
-\contentsline {section}{\numberline {G}Band structure : Materials Project}{26}{appendix.G}%
-\contentsline {section}{\numberline {H}Electronic density of states}{27}{appendix.H}%
-\contentsline {section}{\numberline {I}Phonons : Generation of a list of $q$-points}{28}{appendix.I}%
-\contentsline {section}{\numberline {J}Phonons : Generation of the derivative databases}{29}{appendix.J}%
-\contentsline {section}{\numberline {K}Phonons : Computation of the band structure}{31}{appendix.K}%
+\contentsline {subsection}{\numberline {3.4}Phonon density of states}{16}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Absorption spectrum}{16}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Macroscopic consequences}{16}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Conclusion}{16}{section.4}%
+\contentsline {section}{\numberline {A}Convergence of the total energy per atom as a function of \texttt {ecut}}{20}{appendix.A}%
+\contentsline {section}{\numberline {B}Convergence of the total energy per atom as a function of \texttt {ngkpt}}{21}{appendix.B}%
+\contentsline {section}{\numberline {C}Convergence of the lattice scale parameters as a function of \texttt {ecut}}{22}{appendix.C}%
+\contentsline {section}{\numberline {D}Convergence of the lattice scale parameters as a function of \texttt {ngkpt}}{23}{appendix.D}%
+\contentsline {section}{\numberline {E}Band structure : $k$-path generation using Absitruct (Abipy)}{24}{appendix.E}%
+\contentsline {section}{\numberline {F}Band structure computation}{26}{appendix.F}%
+\contentsline {section}{\numberline {G}Band structure : Materials Project}{27}{appendix.G}%
+\contentsline {section}{\numberline {H}Electronic density of states}{28}{appendix.H}%
+\contentsline {section}{\numberline {I}Phonons : Generation of a list of $q$-points}{29}{appendix.I}%
+\contentsline {section}{\numberline {J}Phonons : Generation of the derivative databases}{30}{appendix.J}%
+\contentsline {section}{\numberline {K}Phonons : Computation of the band structure}{32}{appendix.K}%

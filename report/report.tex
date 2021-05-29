@@ -403,7 +403,6 @@ One can see here that the plots also show the same features. Some differences ca
 \item On the plot obtained using \texttt{Abinit} and \texttt{Python} (\autoref{fig:dos2}), the peaks above the bandgap are not as developed as on the plot provided by the Topological Materials Database (\autoref{fig:dos3}). This is due to the same reason as previously : only the first conduction band has been considered during the \texttt{Abinit} computation, while it is clearly not the case for the other plot. 
 \item On the plot obtained with \texttt{Python}, peaks of high amplitude can be seen at several energies (for example just below the bandgap). After further investigation, the peaks span until a DOS of $\sim$ 65 states/eV, implying that the amplitude of those peaks is probably a computational artefact. Such peaks are not visible on the other plot, because it has been smeared a little, demonstrating the utility of the smearing of the plot of the electronic DOS.
 \end{itemize}
-
 \subsection{Phonon dispersion}
 The phonon dispersion of the material was computed as follows. First, a list of convenient $q$-points has to be generated. This is done by generating a list of $k$-points. To do so, we run a standard SCF computation. However in this case the SCF procedure is dummy. Indeed, \texttt{nstep} and \texttt{nline} are set to \texttt{1}, preventing \texttt{Abinit} to run more than one iteration during the computation, as explained in \cite{tutoPhonons}. The input file is available in \autoref{Abi9}. Note that \texttt{shiftk} was set to \texttt{[0 0 0]} and not \texttt{[0.5 0.5 0.5]} as in the previous computations. This is done to force \texttt{Abinit} to include the $\Gamma$ point in the list to be generated.
 
@@ -414,9 +413,16 @@ Once the list of $k$-points is generated, we use it as a list of $q$-points for 
 \item The third one is used to compute the response function at $\Gamma$ of an electric field perturbation.
 \item The other datasets are used to compute the phonon response at the other $q$-points. As only one $q$-point can be considered at a time, we need as many additional datasets as $q$-points.
 \end{itemize}
-After the run, several databases will be generated, corresponding to the specified datasets. The input file is available in \autoref{Abi10}. Those databases are merged using the \texttt{MRGDDB} tool, then analyzed using the \texttt{ANADDB} tool. Then, using the generated \texttt{\_B2EPS.freq} file containing the frequencies for all the $q$-points of the specified $q$-path, it is possible to produce a final file containing the band structure.
+After the run, several databases are generated, corresponding to the specified datasets. The input file is available in \autoref{Abi10}. Those databases are merged and analyzed using the \texttt{MRGDDB} and \texttt{ANADDB} utilities. During the latter analysis, \texttt{ANADDB} computes different physical properties based on the databases containing the derivatives of the total energy (merged using \texttt{MRGDDB}). The properties to be computed are specified by a series of \textit{flags}. For example : 
+\begin{itemize}
+\item \texttt{ifcflag} is used to compute the interatomic force constants, which will be used to interpolate the phonon spectrum used in the band structure.
+\item \texttt{dipdip} is used to handle the dipole-dipole interactions separately from the interatomic forces, leading to more accurate results.
+\item \texttt{eivec} is used to generate an output file containing the frequencies for the different $q$-points, allowing to plot the phonon dispersion (refered to as the \texttt{\_B2EPS.freq} file).
+\item \texttt{prtdos} allows to output a file containing the phonon density of states (see \autoref{fig:phonondos}).
+\end{itemize}
+The input file must also contain two specific lists of $q$-points. The first one is the $q$-path along which the phonon dipsersion will be computed. A previous list of $k$-points used to plot the electronic band structure was used. The second list of $q$-points contains actually one single $q$-point : $\Gamma$. Indeed, a discontinuity can be seen in the phonon band structure at this specific point. The frequencies computed at this point will be hardcoded in the \texttt{\_B2EPS.freq} file to get a proper plot\footnote{Note that the discontinuity at $\Gamma$ is still there on \autoref{fig:phonon1} and \autoref{fig:phonon2}. Indeed, no package was able to open the hacked \texttt{.eps} file properly.}.
 
-It was plotted using \texttt{Abipy} (\autoref{fig:phonon1}) and was compared with the phonon dispersion plot provided by the Materials Project (\autoref{fig:phonon2}).
+Then, using the generated \texttt{\_B2EPS.freq} file containing the frequencies for all the $q$-points of the specified $q$-path, it is possible to produce a final file containing the band structure. It was plotted using \texttt{Abipy} (\autoref{fig:phonon1}) and was compared with the phonon dispersion plot provided by the Materials Project (\autoref{fig:phonon2}).
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{images/phonon1.pdf}
@@ -452,7 +458,8 @@ By setting \texttt{prtdos = 2}, it is possible to compute the phonon DOS using t
 \caption{Comparison of the phonon DOS}
 \label{fig:phonondos}
 \end{figure}
-\newpage
+\subsection{Absorption spectrum}
+\subsection{Macroscopic consequences}
 \section{Conclusion}
 \textcolor{blue}{
 \textbackslash\textbackslash TODO\\
@@ -460,6 +467,7 @@ By setting \texttt{prtdos = 2}, it is possible to compute the phonon DOS using t
 - What has been learned ? \\
 - What implications in real life applications ?\\
 - What further studies could be done ?}
+\newpage
 \bibliographystyle{IEEEtran}
 \bibliography{biblio}
 \newpage
