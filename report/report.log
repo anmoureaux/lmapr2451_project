@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.25)  29 MAY 2021 02:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.25)  29 MAY 2021 17:23
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -674,25 +674,31 @@ Package: chemformula 2020/12/22 v4.16 typeset chemical compounds and reactions
 \l__chemformula_subscript_box=\box70
 \l__chemformula_plus_space_skip=\skip63
 \l__chemformula_minus_space_skip=\skip64
-) (./report.aux)
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks35
+\verbatim@line=\toks36
+\verbatim@in@stream=\read3
+)
+(./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -704,12 +710,12 @@ Package caption Info: End \AtBeginDocument code.
 \scratchbox=\box71
 \nofMPsegments=\count308
 \nofMParguments=\count309
-\everyMPshowfont=\toks35
+\everyMPshowfont=\toks37
 \MPscratchCnt=\count310
 \MPscratchDim=\dimen310
 \MPnumerator=\count311
 \makeMPintoPDFobject=\count312
-\everyMPtoPDFconversion=\toks36
+\everyMPtoPDFconversion=\toks38
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -719,7 +725,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 48.
+Package hyperref Info: Link coloring OFF on input line 49.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -732,25 +738,25 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count313
 )
-LaTeX Info: Redefining \ref on input line 48.
-LaTeX Info: Redefining \pageref on input line 48.
-LaTeX Info: Redefining \nameref on input line 48.
+LaTeX Info: Redefining \ref on input line 49.
+LaTeX Info: Redefining \pageref on input line 49.
+LaTeX Info: Redefining \nameref on input line 49.
 
 (./report.out) (./report.out)
 \@outlinefile=\write4
 \openout4 = `report.out'.
 
-<images/epl2.png, id=123, 1204.5pt x 328.22626pt>
+<images/epl2.png, id=135, 1204.5pt x 328.22626pt>
 File: images/epl2.png Graphic file (type png)
 <use images/epl2.png>
-Package pdftex.def Info: images/epl2.png  used on input line 53.
+Package pdftex.def Info: images/epl2.png  used on input line 54.
 (pdftex.def)             Requested size: 249.13371pt x 67.8878pt.
-LaTeX Font Info:    Trying to load font information for T1+qag on input line 57
+LaTeX Font Info:    Trying to load font information for T1+qag on input line 58
 .
  (/usr/share/texmf/tex/latex/tex-gyre/t1qag.fd
 File: t1qag.fd 2009/09/25 v1.2 font definition file for T1/qag
 )
-Overfull \hbox (10.43053pt too wide) in paragraph at lines 82--88
+Overfull \hbox (10.43053pt too wide) in paragraph at lines 83--89
  [] 
  []
 
@@ -765,7 +771,7 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 
 LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 19.
+(Font)              using `T1/cmtt/m/n' instead on input line 21.
 
 )
 \tf@toc=\write5
@@ -775,30 +781,30 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.95 \newpage
+l.96 \newpage
               [1]
-<images/pyrite.png, id=175, 104.7915pt x 88.4103pt>
+<images/pyrite.png, id=191, 104.7915pt x 88.4103pt>
 File: images/pyrite.png Graphic file (type png)
 <use images/pyrite.png>
-Package pdftex.def Info: images/pyrite.png  used on input line 104.
+Package pdftex.def Info: images/pyrite.png  used on input line 105.
 (pdftex.def)             Requested size: 203.83417pt x 171.98654pt.
-<images/marcassite.jpg, id=176, 642.4pt x 427.5975pt>
+<images/marcassite.jpg, id=192, 642.4pt x 427.5975pt>
 File: images/marcassite.jpg Graphic file (type jpg)
 <use images/marcassite.jpg>
-Package pdftex.def Info: images/marcassite.jpg  used on input line 111.
+Package pdftex.def Info: images/marcassite.jpg  used on input line 112.
 (pdftex.def)             Requested size: 203.83417pt x 135.6726pt.
-<images/pnjunction.png, id=182, 383.031pt x 173.9298pt>
+<images/pnjunction.png, id=198, 383.031pt x 173.9298pt>
 File: images/pnjunction.png Graphic file (type png)
 <use images/pnjunction.png>
-Package pdftex.def Info: images/pnjunction.png  used on input line 129.
+Package pdftex.def Info: images/pnjunction.png  used on input line 130.
 (pdftex.def)             Requested size: 362.37569pt x 164.56091pt.
  [2 <./images/pyrite.png> <./images/marcassite.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\ch' on input line 138.
+(hyperref)                removing `\ch' on input line 139.
 
 [3 <./images/pnjunction.png>]
-Overfull \hbox (52.25182pt too wide) in paragraph at lines 145--159
+Overfull \hbox (52.25182pt too wide) in paragraph at lines 146--160
  [] 
  []
 
@@ -811,249 +817,251 @@ Package epstopdf Info: Source file: <images/primitiveCell.eps>
 (epstopdf)                    size: 512653 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/primitiveCell-eps-co
 nverted-to.pdf images/primitiveCell.eps>
-(epstopdf)             \includegraphics on input line 163.
+(epstopdf)             \includegraphics on input line 164.
 Package epstopdf Info: Output file is already uptodate.
-<images/primitiveCell-eps-converted-to.pdf, id=221, 1612.0225pt x 743.77875pt>
+<images/primitiveCell-eps-converted-to.pdf, id=236, 1612.0225pt x 743.77875pt>
 File: images/primitiveCell-eps-converted-to.pdf Graphic file (type pdf)
 <use images/primitiveCell-eps-converted-to.pdf>
 Package pdftex.def Info: images/primitiveCell-eps-converted-to.pdf  used on inp
-ut line 163.
+ut line 164.
 (pdftex.def)             Requested size: 452.9679pt x 208.99432pt.
 [4 <./images/primitiveCell-eps-converted-to.pdf>]
-Overfull \hbox (68.96878pt too wide) in paragraph at lines 180--193
+Overfull \hbox (68.96878pt too wide) in paragraph at lines 181--194
  [] 
  []
 
 [5]
-<images/etotecut.pdf, id=244, 1387.58403pt x 706.0779pt>
+<images/etotecut.pdf, id=259, 1387.58403pt x 706.0779pt>
 File: images/etotecut.pdf Graphic file (type pdf)
 <use images/etotecut.pdf>
-Package pdftex.def Info: images/etotecut.pdf  used on input line 206.
+Package pdftex.def Info: images/etotecut.pdf  used on input line 207.
 (pdftex.def)             Requested size: 452.9679pt x 230.49611pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 213.
+(hyperref)                removing `math shift' on input line 214.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 213.
+(hyperref)                removing `math shift' on input line 214.
 
-<images/etotngkpt.pdf, id=247, 1387.58403pt x 706.0779pt>
+<images/etotngkpt.pdf, id=262, 1387.58403pt x 706.0779pt>
 File: images/etotngkpt.pdf Graphic file (type pdf)
 <use images/etotngkpt.pdf>
-Package pdftex.def Info: images/etotngkpt.pdf  used on input line 217.
+Package pdftex.def Info: images/etotngkpt.pdf  used on input line 218.
 (pdftex.def)             Requested size: 452.9679pt x 230.49611pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/acellConv.png, id=250, 1387.584pt x 706.0779pt>
+<images/acellConv.png, id=265, 1387.584pt x 706.0779pt>
 File: images/acellConv.png Graphic file (type png)
 <use images/acellConv.png>
-Package pdftex.def Info: images/acellConv.png  used on input line 233.
+Package pdftex.def Info: images/acellConv.png  used on input line 234.
 (pdftex.def)             Requested size: 452.9679pt x 230.49611pt.
 [6 <./images/etotecut.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 237.
+(hyperref)                removing `math shift' on input line 238.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 237.
+(hyperref)                removing `math shift' on input line 238.
 
-<images/acellNgkpt.pdf, id=312, 1387.58403pt x 706.0779pt>
+<images/acellNgkpt.pdf, id=327, 1387.58403pt x 706.0779pt>
 File: images/acellNgkpt.pdf Graphic file (type pdf)
 <use images/acellNgkpt.pdf>
-Package pdftex.def Info: images/acellNgkpt.pdf  used on input line 241.
+Package pdftex.def Info: images/acellNgkpt.pdf  used on input line 242.
 (pdftex.def)             Requested size: 452.9679pt x 230.49611pt.
 [7 <./images/etotngkpt.pdf>] [8 <./images/acellConv.png> <./images/acellNgkpt.p
 df>]
-<images/bz.png, id=421, 477.785pt x 350.30875pt>
+<images/bz.png, id=436, 477.785pt x 350.30875pt>
 File: images/bz.png Graphic file (type png)
 <use images/bz.png>
-Package pdftex.def Info: images/bz.png  used on input line 308.
+Package pdftex.def Info: images/bz.png  used on input line 309.
 (pdftex.def)             Requested size: 181.18439pt x 132.84074pt.
  [9 <./images/bz.png>]
-<images/bs.pdf, id=438, 1387.58403pt x 706.0779pt>
+<images/bs.pdf, id=454, 1387.58403pt x 706.0779pt>
 File: images/bs.pdf Graphic file (type pdf)
 <use images/bs.pdf>
-Package pdftex.def Info: images/bs.pdf  used on input line 340.
+Package pdftex.def Info: images/bs.pdf  used on input line 341.
 (pdftex.def)             Requested size: 452.9679pt x 230.49611pt.
-<images/bsCombined.pdf, id=439, 1204.01822pt x 1003.10759pt>
+<images/bsCombined.pdf, id=455, 1204.01822pt x 1003.10759pt>
 File: images/bsCombined.pdf Graphic file (type pdf)
 <use images/bsCombined.pdf>
-Package pdftex.def Info: images/bsCombined.pdf  used on input line 346.
+Package pdftex.def Info: images/bsCombined.pdf  used on input line 347.
 (pdftex.def)             Requested size: 452.9679pt x 377.37361pt.
 
-Overfull \hbox (2.00037pt too wide) in paragraph at lines 353--354
+Overfull \hbox (2.00037pt too wide) in paragraph at lines 354--355
 []\T1/cmr/m/n/10.95 Then, the DOS was com-puted us-ing the tetra-he-dron meth-o
 de with \T1/cmtt/b/n/10.95 prtdos \T1/cmr/m/n/10.95 = \T1/cmtt/b/n/10.95 2 \T1/
 cmr/m/n/10.95 and \T1/cmtt/b/n/10.95 dosdeltae
  []
 
 [10 <./images/bs.pdf>] [11 <./images/bscombined.pdf>]
-<images/dos1.png, id=515, 1387.584pt x 706.0779pt>
+<images/dos1.png, id=530, 1387.584pt x 706.0779pt>
 File: images/dos1.png Graphic file (type png)
 <use images/dos1.png>
-Package pdftex.def Info: images/dos1.png  used on input line 365.
+Package pdftex.def Info: images/dos1.png  used on input line 366.
 (pdftex.def)             Requested size: 430.31812pt x 218.96806pt.
-<images/dos4.png, id=516, 973.6375pt x 271.0125pt>
+<images/dos4.png, id=531, 973.6375pt x 271.0125pt>
 File: images/dos4.png Graphic file (type png)
 <use images/dos4.png>
-Package pdftex.def Info: images/dos4.png  used on input line 372.
+Package pdftex.def Info: images/dos4.png  used on input line 373.
 (pdftex.def)             Requested size: 430.31812pt x 119.77931pt.
  [12 <./images/dos1.png> <./images/dos4.png>]
-<images/dos2.png, id=531, 693.792pt x 706.0779pt>
+<images/dos2.png, id=546, 693.792pt x 706.0779pt>
 File: images/dos2.png Graphic file (type png)
 <use images/dos2.png>
-Package pdftex.def Info: images/dos2.png  used on input line 386.
+Package pdftex.def Info: images/dos2.png  used on input line 387.
 (pdftex.def)             Requested size: 271.7835pt x 276.59749pt.
-<images/dos3.png, id=532, 298.11375pt x 611.28375pt>
+<images/dos3.png, id=547, 298.11375pt x 611.28375pt>
 File: images/dos3.png Graphic file (type png)
 <use images/dos3.png>
-Package pdftex.def Info: images/dos3.png  used on input line 393.
+Package pdftex.def Info: images/dos3.png  used on input line 394.
 (pdftex.def)             Requested size: 135.89174pt x 278.64755pt.
  [13 <./images/dos2.png> <./images/dos3.png>]
-<images/phonon1.pdf, id=557, 1387.58403pt x 706.0779pt>
+<images/phonon1.pdf, id=572, 1387.58403pt x 706.0779pt>
 File: images/phonon1.pdf Graphic file (type pdf)
 <use images/phonon1.pdf>
-Package pdftex.def Info: images/phonon1.pdf  used on input line 428.
+Package pdftex.def Info: images/phonon1.pdf  used on input line 429.
 (pdftex.def)             Requested size: 452.9679pt x 230.49611pt.
-<images/phonon2.pdf, id=558, 1387.58672pt x 706.07932pt>
+<images/phonon2.pdf, id=573, 1387.58672pt x 706.07932pt>
 File: images/phonon2.pdf Graphic file (type pdf)
 <use images/phonon2.pdf>
-Package pdftex.def Info: images/phonon2.pdf  used on input line 435.
+Package pdftex.def Info: images/phonon2.pdf  used on input line 436.
 (pdftex.def)             Requested size: 452.9679pt x 230.49657pt.
-<images/dos.png, id=560, 706.8006pt x 1388.3067pt>
-File: images/dos.png Graphic file (type png)
-<use images/dos.png>
-Package pdftex.def Info: images/dos.png  used on input line 447.
-(pdftex.def)             Requested size: 244.59961pt x 480.42801pt.
-<images/phonon_dos.png, id=561, 144.54pt x 397.485pt>
-File: images/phonon_dos.png Graphic file (type png)
-<use images/phonon_dos.png>
-Package pdftex.def Info: images/phonon_dos.png  used on input line 454.
-(pdftex.def)             Requested size: 163.06871pt x 448.4614pt.
  [14] [15 <./images/phonon1.pdf> <./images/phonon2.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./images/phonon2.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
->] [16] [17 <./images/dos.png> <./images/phonon_dos.png>] (./report.bbl
+>]
+<images/dos.png, id=668, 706.8006pt x 1388.3067pt>
+File: images/dos.png Graphic file (type png)
+<use images/dos.png>
+Package pdftex.def Info: images/dos.png  used on input line 448.
+(pdftex.def)             Requested size: 249.13371pt x 489.3464pt.
+<images/phonon_dos.png, id=669, 144.54pt x 397.485pt>
+File: images/phonon_dos.png Graphic file (type png)
+<use images/phonon_dos.png>
+Package pdftex.def Info: images/phonon_dos.png  used on input line 455.
+(pdftex.def)             Requested size: 158.54152pt x 436.00969pt.
+ [16] [17 <./images/dos.png> <./images/phonon_dos.png>] (./report.bbl
 [18]) [19]
-Overfull \hbox (57.91019pt too wide) in paragraph at lines 479--511
+Overfull \hbox (57.91019pt too wide) in paragraph at lines 527--559
  [] 
  []
 
 [20]
-Overfull \hbox (57.91019pt too wide) in paragraph at lines 517--553
+Overfull \hbox (57.91019pt too wide) in paragraph at lines 565--601
  [] 
  []
 
 [21]
-Overfull \hbox (57.91019pt too wide) in paragraph at lines 559--595
+Overfull \hbox (57.91019pt too wide) in paragraph at lines 607--643
  [] 
  []
 
 [22]
-Overfull \hbox (57.91019pt too wide) in paragraph at lines 601--640
+Overfull \hbox (57.91019pt too wide) in paragraph at lines 649--688
  [] 
  []
 
 [23]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 642.
+(hyperref)                removing `math shift' on input line 690.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 642.
+(hyperref)                removing `math shift' on input line 690.
 
 [24]
-Overfull \hbox (68.2855pt too wide) in paragraph at lines 670--714
+Overfull \hbox (68.2855pt too wide) in paragraph at lines 718--762
 [] 
  []
 
 [25]
-Overfull \hbox (1.7516pt too wide) in paragraph at lines 718--767
+Overfull \hbox (1.7516pt too wide) in paragraph at lines 766--815
  [] 
  []
 
 [26]
-<images/chart.pdf, id=724, 1204.5pt x 1003.75pt>
+<images/chart.pdf, id=748, 1204.5pt x 1003.75pt>
 File: images/chart.pdf Graphic file (type pdf)
 <use images/chart.pdf>
-Package pdftex.def Info: images/chart.pdf  used on input line 773.
+Package pdftex.def Info: images/chart.pdf  used on input line 821.
 (pdftex.def)             Requested size: 452.9679pt x 377.47745pt.
  [27 <./images/chart.pdf>]
-Overfull \hbox (58.33531pt too wide) in paragraph at lines 780--825
+Overfull \hbox (58.33531pt too wide) in paragraph at lines 828--873
  [] 
  []
 
 [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 827.
+(hyperref)                removing `math shift' on input line 875.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 827.
+(hyperref)                removing `math shift' on input line 875.
 
 
-Overfull \hbox (47.01857pt too wide) in paragraph at lines 830--862
+Overfull \hbox (47.01857pt too wide) in paragraph at lines 878--910
  [] 
  []
 
 [29]
-Overfull \hbox (73.94388pt too wide) in paragraph at lines 867--897
+Overfull \hbox (73.94388pt too wide) in paragraph at lines 915--945
  [] 
  []
 
 
-Overfull \hbox (34.33528pt too wide) in paragraph at lines 899--923
+Overfull \hbox (34.33528pt too wide) in paragraph at lines 947--971
  [] 
  []
 
-[30] [31] [32] (./report.aux)
+[30] [31] [32] [33] (./report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: C8A5CA01782B30885C1F4769A144CC48;2374.
+(rerunfilecheck)             Checksum: A50EABA0030A19D5FD8E030FA14AB9AB;2580.
  ) 
 Here is how much of TeX's memory you used:
- 19734 strings out of 479304
- 388351 string characters out of 5869779
- 681428 words of memory out of 5000000
- 36404 multiletter control sequences out of 15000+600000
+ 19781 strings out of 479304
+ 389124 string characters out of 5869779
+ 683395 words of memory out of 5000000
+ 36440 multiletter control sequences out of 15000+600000
  455680 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,11n,102p,1367b,552s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/tex
 -gyre/q-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/pub
-lic/tex-gyre/qagb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qagbi.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfrb0800.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfrb1095.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfrb1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrb1440.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></u
-sr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sftc1095.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0900.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sftt1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on report.pdf (33 pages, 3440737 bytes).
+ex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/te
+x-gyre/qagb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qagbi.pfb></usr/s
+hare/texmf/fonts/type1/public/cm-super/sfrb0800.pfb></usr/share/texmf/fonts/typ
+e1/public/cm-super/sfrb1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
+frb1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrb1440.pfb></usr/sh
+are/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
+rm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/sha
+re/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1
+/public/cm-super/sftc1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sft
+i1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0900.pfb></usr/shar
+e/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt
+1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1440.pfb>
+Output written on report.pdf (34 pages, 3453806 bytes).
 PDF statistics:
- 873 PDF objects out of 1000 (max. 8388607)
- 556 compressed objects within 6 object streams
- 100 named destinations out of 1000 (max. 500000)
- 350 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 905 PDF objects out of 1000 (max. 8388607)
+ 585 compressed objects within 6 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 374 words of extra memory for PDF output out of 10000 (max. 10000000)
 

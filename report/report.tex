@@ -14,6 +14,7 @@
 \usepackage{hyperref}
 \definecolor{darkblue}{RGB}{14,43,88}
 \usepackage{chemformula}
+\usepackage{verbatim}
 
 \makeatletter
 \newcommand{\authors}{%
@@ -409,7 +410,7 @@ The phonon dispersion of the material was computed as follows. First, a list of 
 Once the list of $k$-points is generated, we use it as a list of $q$-points for the further computations. The next step is to compute the phonon spectrum over the obtained $q$-points. A few datasets are used : 
 \begin{itemize}
 \item The first one is a ground-state self-consistency computation that will be used for all the other datasets. 
-\item The second dataset is used to compute the response function of the $\frac{\text{d}}{\text{d}k}$ wave functions.
+\item The second dataset is used to compute the response function of the ground-state wavefunctions with respect to $k$ ($\frac{\text{d}}{\text{d}k}$ calculation).
 \item The third one is used to compute the response function at $\Gamma$ of an electric field perturbation.
 \item The other datasets are used to compute the phonon response at the other $q$-points. As only one $q$-point can be considered at a time, we need as many additional datasets as $q$-points.
 \end{itemize}
@@ -442,14 +443,14 @@ By setting \texttt{prtdos = 2}, it is possible to compute the phonon DOS using t
 
 \begin{figure}
 \centering
-\begin{subfigure}[b]{0.54\textwidth}
+\begin{subfigure}[b]{0.55\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/dos}
 \caption{Computed phonon DOS plotted using \texttt{Abipy}}
 \label{fig:phonondos1}
 \end{subfigure}
 \hfill
-\begin{subfigure}[b]{0.36\textwidth}
+\begin{subfigure}[b]{0.35\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/phonon_dos.png}
 \caption{Phonon DOS provided by the Materials Project}
@@ -458,8 +459,54 @@ By setting \texttt{prtdos = 2}, it is possible to compute the phonon DOS using t
 \caption{Comparison of the phonon DOS}
 \label{fig:phonondos}
 \end{figure}
-\subsection{Absorption spectrum}
-\subsection{Macroscopic consequences}
+\subsection{Dielectric tensor}
+To compute the dielectric tensor of the material, a DFPT computation is performed using \texttt{Abinit}. In the input file (\autoref{Abi11}) three datasets are created : 
+\begin{itemize}
+\item The first one is used to generate the ground-state properties of the material, and the ground-state wavefunctions that will be used in the further computations.
+\item The second dataset is used to compute the derivatives of the wavefunctions with respect to $k$ ($\frac{\text{d}}{\text{d}k}$ calculation).  
+\item The third and last dataset is used to compute the response function under perturbations due to the electric field.
+\end{itemize}
+The obtained dielectric tensor is a diagonal $3\times 3$ tensor : 
+\begin{equation}
+\label{eqn:dielectricTens}\underline{\underline{\varepsilon}} = \left(\begin{array}{ccc}20.2021&0&0\\0&20.9923&0\\0&0&20.8858\end{array}\right)\end{equation}
+\section{Results and macroscopic implications}
+\subsection{Dielectric tensor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+The electrical displacement $\mathbf{D}$ in the material is linked to the electric field $\mathbf{E}$ and the polarization $\mathbf{P}$ by the following relations : 
+\begin{align}\mathbf{D}&=\varepsilon_0\mathbf{E}+\mathbf{P}\\
+&=\varepsilon_0\mathbf{E}+\varepsilon_0\chi\mathbf{E}\\
+&=\varepsilon_0(1+\underline{\underline{\chi}})\mathbf{E}\\
+&=\varepsilon_0\underline{\underline{\varepsilon_r}}\mathbf{E}\\
+&=\underline{\underline{\varepsilon}}\mathbf{E}
+\end{align}
+where $\varepsilon_0$ is the \textit{vacuum permittivity}, $\underline{\underline{\varepsilon_r}}$ is the \textit{relative permittivity} of the material and $\underline{\underline{\chi}}$ is the \textit{electric susceptibility} of the material.
+The dielectric constant tensor is obtained by dividing the dielectric tensor by the vacuum permittivity $\varepsilon_0 = 8.85418782\times 10^{-12}$ [A$^2$s$^4$kg$^{-1}$m$^{-3}$]:
+\begin{equation}
+\underline{\underline{\varepsilon_r}} = \left(\begin{array}{ccc}
+\end{array}\right)
+\end{equation}
+The electric susceptibility tensor of the material, which represents the polarization of the material induced by an electric field, is thus 
+$$\underline{\underline{\chi}} = \left(\begin{array}{ccc}
+\end{array}\right)$$
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+From \autoref{eqn:dielectricTens}, the dielectric constant (relative permittivity) $\varepsilon_{r}$ of \ch{FeS2} can be computed :  
+\begin{equation}
+\label{eqn:dielectricCst}
+\varepsilon_{r} = \dfrac{20.2021+20.9923+20.8858}{3} = 20.6934
+\end{equation}
+For comparison, the value provided by the Materials Project is $\varepsilon_r = 21.1311$. \\
+The value of the electric susceptibility naturally follows \autoref{eqn:dielectricCst} : 
+\begin{equation}
+\label{eqn:electricSusc}
+\chi = \varepsilon_r-1 = 19.693
+\end{equation}
+\subsection{Band structure and band gap}
 \section{Conclusion}
 \textcolor{blue}{
 \textbackslash\textbackslash TODO\\
@@ -468,6 +515,7 @@ By setting \texttt{prtdos = 2}, it is possible to compute the phonon DOS using t
 - What implications in real life applications ?\\
 - What further studies could be done ?}
 \newpage
+\phantom{\cite{fox}}
 \bibliographystyle{IEEEtran}
 \bibliography{biblio}
 \newpage
@@ -941,6 +989,58 @@ Output :\\
 \texttt{nph2l}&\texttt{1}&\\
 \texttt{qph2l}&\texttt{1.0 1.0 1.0}&\\
 \texttt{ng2qpt}&\texttt{3 3 3}&\\
+\end{tabular}
+\end{center}
+\newpage
+\section{Dielectric tensor computation}
+\label{Abi11}
+\begin{center}
+\begin{tabular}{lll}
+\texttt{ndtset}&\texttt{3}&\\
+\texttt{kptopt}&\texttt{1}&\\
+\texttt{tolvrs}&\texttt{1.0d-19}&\\
+\texttt{rfelfd2}&\texttt{2}\\
+\texttt{rfdir}&\texttt{1 1 1}\\
+\texttt{nqpt2}&\texttt{1}&\texttt{}\\
+\texttt{qpt2}&\texttt{0.0 0.0 0.0}&\\
+\texttt{getwfk2}&\texttt{-1}&\texttt{}\\
+\texttt{kptopt2}&\texttt{2}\\
+\texttt{iscf2}&\texttt{-3}\\
+\texttt{tolwfr2}&\texttt{1.0d-22}&\texttt{}\\
+\texttt{rfphon3}&\texttt{1}&\texttt{}\\
+\texttt{rfatpol3}&\texttt{1 6}&\texttt{}\\
+\texttt{rfelfd3}&\texttt{3}&\texttt{}\\
+\texttt{rfdir3}&\texttt{1 1 1}&\texttt{}\\
+\texttt{nqpt3}&\texttt{1}&\texttt{}\\
+\texttt{qpt3}&\texttt{0.0 0.0 0.0}&\texttt{}\\
+\texttt{getwfk3}&\texttt{-2}&\texttt{}\\
+\texttt{getddk3}&\texttt{-1}&\texttt{}\\
+\texttt{kptopt3}&\texttt{2}&\texttt{}\\
+\texttt{tolvrs3}&\texttt{1.0d-12}&\texttt{}\\
+\texttt{acell} & \texttt{1.0 1.0 1.0} & \\
+\texttt{rprim}&&\\
+&\texttt{6.2644421031    0.0000000000    0.0000000000}&\\
+&\texttt{0.0000000000    8.2010334357    0.0000000000}&\\
+&\texttt{0.0000000000    0.0000000000    9.9991078432}&\\
+\texttt{ntypat} & \texttt{2} & \\
+\texttt{znucl} & \texttt{26 16} & \\
+\texttt{pseudos}&\texttt{"Fe.psp8,S.psp8"}&\\
+\texttt{natom}&\texttt{6}&\\
+\texttt{typat}&\texttt{1 1 2 2 2 2}&\\
+\texttt{xred} &&\\
+&\texttt{0.0000000000    0.0000000000    0.0000000000}&\\
+&\texttt{0.5000000000    0.5000000000    0.5000000000}&\\
+&\texttt{0.0000000000    0.2080900000    0.3737400000}&\\
+&\texttt{0.0000000000    0.7919100000    0.6262600000}&\\
+&\texttt{0.5000000000    0.2919100000    0.8737400000}&\\
+&\texttt{0.5000000000    0.7080900000    0.1262600000}&\\
+\texttt{nband}&\texttt{35}&\\
+\texttt{ecut}&\texttt{40.0}&\\
+\texttt{ngkpt}&\texttt{3 3 3}&\\
+\texttt{nshiftk}&\texttt{1}&\\
+\texttt{shiftk}&\texttt{0.5 0.5 0.5}&\\
+\texttt{nstep}&\texttt{100}&\\
+\texttt{diemac}&\texttt{24.0}&\\
 \end{tabular}
 \end{center}
 \end{document}

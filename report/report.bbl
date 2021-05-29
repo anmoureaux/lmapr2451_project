@@ -124,4 +124,7 @@ Abinit, tutorial dfpt rf2. Accessed: 26-05-2021. [Online]. Available:
   \url{https://docs.abinit.org/tutorial/rf2/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{fox}
+M.~Fox, \emph{Optical Properties of Solids}, O.~U. Press, Ed., 2001.
+
 \end{thebibliography}
