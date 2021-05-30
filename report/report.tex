@@ -325,7 +325,7 @@ The input file \texttt{1522\_14\_bs.abi} is available in \autoref{Abi6}.
 
 The band structure is represented on \autoref{fig:bs}. The Fermi energy and the energy of the bandgap were also retrieved from the computed data. It is compared below with the data from the Materials Project \cite{MaterialsProject}. The band structure provided by the Materials Project, which can be found in \autoref{Abi7}, is compared with the computed one on \autoref{fig:bsMPCombined}.
 
-Besides a difference of $2.45$ eV concerning the Fermi energies, the results of the computation seems consistent regarding the data of the Materials Project. \textbf{\textcolor{red}{why ???}}
+Besides a difference of $2.45$ eV concerning the Fermi energies, the results of the computation seems consistent regarding the data of the Materials Project. That difference can be explained by a difference in the value of the parameters ruling the computation. 
 \begin{table}
 \centering
 \begin{tabular}{|l|c|c|}
@@ -361,7 +361,7 @@ By default, \texttt{Abipy} smears the the plot of the DOS, no matter what step o
 \begin{itemize}
 \item First, the plot displayed by \texttt{Abipy} (\autoref{fig:dos1}) isn't as wide as the one provided by the Materials Project (\autoref{fig:dos4}). This is due to the fact that only the first conduction band was computed with \texttt{Abinit} in the first case, while additional conduction bands were considered on the Materials Project.
 \item Secondly, the amplitude of the peaks isn't the same for the two graphs. Once again, it is presumably due to smearing reasons. The main drawback of these two sources (\texttt{Abipy} and the Materials Project) is that the smearing (or the energy step and the sampling of the Brillouin zone) is a black box. However, it can also be due to the method that was used to generate the data (but as it is not specified on the Materials Project, it's difficult to be sure).
-\item Lastly, it can be seen that the peaks on the plot provided by the Mateirals Project are higher in terms of DOS than on the plot calculated by \texttt{Abinit} and displayed by \texttt{Abipy}. \textbf{\textcolor{red}{why ???}}
+\item Lastly, it can be seen that the peaks on the plot provided by the Mateirals Project are higher in terms of DOS than on the plot calculated by \texttt{Abinit} and displayed by \texttt{Abipy}. That difference can be explained by a difference between the smearing level and the $k$-points lattice that has been chosen to run the computation. However, the most worthwhile comparison concerns the density of valence states.
 \end{itemize}
 \begin{figure}[H]
 \centering
@@ -375,7 +375,7 @@ By default, \texttt{Abipy} smears the the plot of the DOS, no matter what step o
 \begin{subfigure}[b]{0.95\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/dos4.png}
-\caption{Electronic DOS provided by the Materials Project}
+\caption{Electronic DOS provided by the Materials Project (\url{https://materialsproject.org/materials/mp-1522/})}
 \label{fig:dos4}
 \end{subfigure}
 \caption{Comparison of the most smeared DOS patterns}
@@ -386,14 +386,14 @@ Then, the plot of the electronic DOS was displayed using a handmade \texttt{Pyth
 
 \begin{figure}[H]
 \centering
-\begin{subfigure}[b]{0.6\textwidth}
+\begin{subfigure}[b]{0.57\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/dos2}
-\caption{Electronic DOS plotted using \texttt{Python} and the \texttt{\_DS2\_GSR.nc Abinit} output file}
+\caption{Electronic DOS plotted using \texttt{Python} and the \texttt{\_DS2\_GSR.nc Abinit} output file\\\hspace{1cm}\\}
 \label{fig:dos2}
 \end{subfigure}
 \hfill
-\begin{subfigure}[b]{0.3\textwidth}
+\begin{subfigure}[b]{0.33\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/dos3.png}
 \caption{Electronic DOS provided by the Topological Materials Database}
@@ -438,7 +438,7 @@ Then, using the generated \texttt{\_B2EPS.freq} file containing the frequencies 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{images/phonon2.pdf}
-\caption{Comparison between the computed phonon dispersion (in black) and the phonon dispersion obtained on the Materials Project (in blue). The superposition of the plots is not complete as the plot provided by the Materials Project is truncated at some $q$-points.}
+\caption{Comparison between the computed phonon dispersion (in black) and the phonon dispersion obtained on the Materials Project (in blue, \url{https://materialsproject.org/materials/mp-1522/}). The superposition of the plots is not complete as the plot provided by the Materials Project is truncated at some $q$-points.}
 \label{fig:phonon2}
 \end{figure}
 
@@ -457,7 +457,7 @@ By setting \texttt{prtdos = 2}, it is possible to compute the phonon DOS using t
 \begin{subfigure}[b]{0.35\textwidth}
 \centering
 \includegraphics[width=\textwidth]{images/phonon_dos.png}
-\caption{Phonon DOS provided by the Materials Project}
+\caption{Phonon DOS provided by the Materials Project (\url{https://materialsproject.org/materials/mp-1522/})}
 \label{fig:phonondos2}
 \end{subfigure}
 \caption{Comparison of the phonon DOS}
@@ -510,7 +510,7 @@ It corresponds to IR-B photons \cite{irb}.
 Although the material studied here is not candidate for future photovoltaic applications, its cubic polymorph, \textit{pyrite}, is. The band gap of the latter material is also indirect \cite{MaterialsProjectPyrite}. It means that in order to generate a free electron-hole pair, one electron of the last valence band will have to interact with an incident photon and a phonon of the crystal lattice. This is why the phonon dipsersion and density of states can be interesting. Furthermore, it can be used to assess the thermal management of the material when exposed to light. 
 In general, that kind of event (interaction with a photon and a phonon at the same time) is far more uncommon than for a direct bandgap, and the photons will penetrate deeper in the material before being absorbed. So in order to absorbed as much light as possible, the layer of material will have to be sufficiently thick \cite{gaps}.
 \subsection{Optics}
-When designing a photovoltaic cell, the material is wanted to have a maximum absorption and a minimum reflectivity, in order to mobilize as much incident light as possible. Moreover, the photons have to be absorbed near the $pn$-junction to generate carriers. It is thus interesting to investigate the frequency dependent properties of the material, as for example the complex frequency dependent dielectric tensor $\tilde{\varepsilon}_r(\omega)$. Those quantities can then bu used to know the frequency dependent refractive index $n(\omega)$, and extinction coefficient $\kappa(\omega)$ as 
+When designing a photovoltaic cell, the material is wanted to have a maximum absorption and a minimum reflectivity, in order to mobilize as much incident light as possible. It implies that the refractive index must be as low as possible. Moreover, the photons have to be absorbed near the $pn$-junction to generate carriers. It is thus interesting to investigate the frequency dependent properties of the material, as for example the complex frequency dependent dielectric tensor $\tilde{\varepsilon}_r(\omega)$. Those quantities can then bu used to know the frequency dependent refractive index $n(\omega)$, and extinction coefficient $\kappa(\omega)$ as 
 \begin{align}
 \tilde{\varepsilon}_r(\omega) &= \tilde{n}^2(\omega)\\
 &= (n(\omega)+j\kappa(\omega))^2
